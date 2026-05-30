@@ -91,16 +91,25 @@ export default function BewertungPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-40 pb-16 bg-brand-green relative overflow-hidden">
-        <RuneIcon size={400} className="absolute bottom-[-40px] right-[-60px] text-white/[0.06] pointer-events-none" />
-        <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center relative z-10">
-          <Badge variant="white" className="mb-6">Kostenlos & Unverbindlich</Badge>
-          <h1 className="text-5xl md:text-6xl font-nazare text-white mb-4">
-            Immobilienbewertung
-          </h1>
-          <p className="text-lg text-white/65 max-w-lg mx-auto">
-            Erhalten Sie innerhalb von 48 Stunden eine realistische Einschätzung Ihrer Immobilie — diskret und kostenlos.
-          </p>
+      <section className="pt-40 pb-24 bg-brand-green relative overflow-hidden">
+        <RuneIcon size={480} className="absolute bottom-[-60px] right-[-80px] text-white/[0.05] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="max-w-2xl"
+          >
+            <motion.div variants={fadeUp}>
+              <Badge variant="white" className="mb-8">Kostenlos & Unverbindlich</Badge>
+            </motion.div>
+            <motion.h1 variants={fadeUp} className="text-5xl md:text-6xl font-nazare text-white mb-6">
+              Immobilien&shy;bewertung
+            </motion.h1>
+            <motion.p variants={fadeUp} className="text-lg text-white/65 max-w-lg">
+              Erhalten Sie innerhalb von 48 Stunden eine realistische Einschätzung Ihrer Immobilie — diskret und kostenlos.
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
