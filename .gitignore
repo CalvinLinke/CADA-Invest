@@ -1,1 +1,8 @@
-test
+.env.local
+.env
+node_modules/
+.next/
+.DS_Store
+*.log
+upload-to-github.js
+upload-to-github.sh
