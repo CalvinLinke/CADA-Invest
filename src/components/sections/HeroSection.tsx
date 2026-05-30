@@ -29,15 +29,15 @@ export function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-14 xl:pt-28 xl:pb-20 2xl:pt-32 2xl:pb-24 w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-14 2xl:pt-32 2xl:pb-24 w-full">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="max-w-2xl"
+          className="max-w-2xl xl:max-w-[620px] 2xl:max-w-2xl"
         >
           <motion.div variants={fadeUp}>
-            <Badge variant="white" className="mb-6 xl:mb-8">
+            <Badge variant="white" className="mb-6 2xl:mb-8">
               Immobilienankauf Sachsen
             </Badge>
           </motion.div>
@@ -57,17 +57,17 @@ export function HeroSection() {
             {/* Gold accent bar top */}
             <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-brand-gold/70 to-transparent" />
 
-            <div className="px-6 py-8 md:px-8 md:py-10 xl:px-10 2xl:py-12">
-              <h1 className="text-4xl sm:text-5xl xl:text-[3.75rem] 2xl:text-[4.25rem] font-nazare text-white leading-[1.08] mb-4 xl:mb-5">
+            <div className="px-6 py-7 md:px-8 xl:py-7 2xl:px-10 2xl:py-12">
+              <h1 className="text-4xl sm:text-5xl xl:text-[2.25rem] 2xl:text-[4.25rem] font-nazare text-white leading-[1.1] mb-3 2xl:mb-5">
                 Wir kaufen Ihre Immobilie —{" "}
                 <span className="text-brand-gold">diskret, schnell und ohne Aufwand.</span>
               </h1>
 
-              <p className="text-base xl:text-lg text-white/75 leading-relaxed mb-7 xl:mb-10 max-w-lg">
+              <p className="text-sm xl:text-[0.9rem] 2xl:text-lg text-white/75 leading-relaxed mb-5 2xl:mb-10 max-w-lg">
                 Professioneller Direktankauf von Wohnimmobilien in Sachsen. Angebot innerhalb von 48 Stunden, Notartermin in unter 4 Wochen.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 2xl:gap-4">
                 <Button href="/immobilienbewertung" variant="primary" size="lg" className="hover:bg-brand-gold hover:shadow-brand-gold/25">
                   Kostenlose Bewertung anfragen
                 </Button>
@@ -87,7 +87,7 @@ export function HeroSection() {
 
             {/* Stats footer — fused to card bottom */}
             <div
-              className="flex flex-wrap divide-x px-6 md:px-8 xl:px-10 py-4 xl:py-5"
+              className="flex flex-wrap divide-x px-6 md:px-8 2xl:px-10 py-3 2xl:py-5"
               style={{
                 borderTop: "1px solid rgba(170,115,74,0.25)",
                 background: "rgba(0,0,0,0.18)",
@@ -98,8 +98,8 @@ export function HeroSection() {
                 { value: "4 Wochen", label: "bis zum Notartermin" },
                 { value: "32+", label: "abgeschlossene Projekte" },
               ].map((s, i) => (
-                <div key={s.label} className={i === 0 ? "pr-5 md:pr-7 xl:pr-8" : "px-5 md:px-7 xl:px-8"}>
-                  <p className="text-lg xl:text-xl font-nazare text-brand-gold">{s.value}</p>
+                <div key={s.label} className={i === 0 ? "pr-4 md:pr-6 2xl:pr-8" : "px-4 md:px-6 2xl:px-8"}>
+                  <p className="text-base 2xl:text-xl font-nazare text-brand-gold">{s.value}</p>
                   <p className="text-xs text-white/55 mt-0.5 tracking-wide">{s.label}</p>
                 </div>
               ))}
