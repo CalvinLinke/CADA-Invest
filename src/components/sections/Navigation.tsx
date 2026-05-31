@@ -129,7 +129,12 @@ export function Navigation() {
             </Link>
           ))}
           <div className={cn("mt-4 transition-all duration-300", open ? "opacity-100" : "opacity-0")}>
-            <Button href="/immobilienbewertung" variant="secondary" size="md">
+            <Button
+              href="/immobilienbewertung"
+              variant="secondary"
+              size="md"
+              className="border-white text-white hover:bg-white hover:text-brand-green"
+            >
               Immobilie anbieten
             </Button>
           </div>
