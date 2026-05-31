@@ -249,7 +249,7 @@ export default function AnkaufPage() {
                     <div>
                       <div className="w-7 h-px bg-brand-gold mb-3" />
                       <p className="text-white font-nazare text-xl lg:text-2xl leading-tight mb-2">
-                        Ankaufs{"\n"}profil
+                        Ankaufsprofil
                       </p>
                       <p className="text-white/45 text-[9px] leading-relaxed">
                         Direktankauf von{"\n"}Wohnimmobilien
@@ -258,7 +258,7 @@ export default function AnkaufPage() {
                     </div>
                     <div>
                       <div className="w-full h-px bg-brand-gold/25 mb-2" />
-                      <p className="text-brand-gold text-[8px] tracking-[0.2em] font-semibold">SACHSEN · 2025</p>
+                      <p className="text-brand-gold text-[8px] tracking-[0.2em] font-semibold">SACHSEN · 2026</p>
                     </div>
                   </div>
                 </div>
