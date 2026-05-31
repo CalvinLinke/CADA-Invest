@@ -216,7 +216,7 @@ export default function PartnerPage() {
                     <div>
                       <div className="w-6 h-px bg-brand-gold mb-3" />
                       <p className="text-white font-nazare text-lg leading-tight mb-2">
-                        Ankaufs{"\n"}profil
+                        Ankaufsprofil
                       </p>
                       <p className="text-white/50 text-[8px] leading-relaxed font-inter">
                         Direktankauf von{"\n"}Wohnimmobilien
@@ -228,7 +228,7 @@ export default function PartnerPage() {
                     <div>
                       <div className="w-full h-px bg-brand-gold/25 mb-2" />
                       <p className="text-brand-gold text-[7px] tracking-[0.2em] font-semibold font-inter">
-                        SACHSEN · 2025
+                        SACHSEN · 2026
                       </p>
                     </div>
                   </div>
