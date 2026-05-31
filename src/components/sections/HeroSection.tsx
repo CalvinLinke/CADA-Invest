@@ -91,7 +91,6 @@ export function HeroSection() {
               style={{
                 borderTop: "1px solid rgba(170,115,74,0.25)",
                 background: "rgba(0,0,0,0.18)",
-                divideColor: "rgba(170,115,74,0.25)",
               }}
             >
               {[
