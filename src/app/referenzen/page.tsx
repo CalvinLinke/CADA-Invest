@@ -81,14 +81,14 @@ export default function ReferenzenPage() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="grid grid-cols-3 divide-x divide-brand-gold/15"
+            className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-brand-gold/15"
           >
             {[
               { value: "32",        unit: "",         label: "realisierte Projekte" },
               { value: "7",         unit: " Jahre",   label: "Markterfahrung in Sachsen" },
               { value: "Ø 3",       unit: " Wochen",  label: "bis zum Notartermin" },
             ].map(({ value, unit, label }) => (
-              <motion.div key={label} variants={fadeUp} className="py-10 px-6 text-center">
+              <motion.div key={label} variants={fadeUp} className="py-8 sm:py-10 px-6 text-center">
                 <p className="text-4xl md:text-5xl font-nazare text-brand-anthracite mb-1">
                   {value}<span className="text-brand-gold">{unit}</span>
                 </p>
