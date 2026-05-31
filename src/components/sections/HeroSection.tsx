@@ -87,10 +87,11 @@ export function HeroSection() {
 
             {/* Stats footer — fused to card bottom */}
             <div
-              className="flex flex-wrap divide-x px-6 md:px-8 2xl:px-10 py-3 2xl:py-5"
+              className="grid grid-cols-3 divide-x px-4 md:px-8 2xl:px-10 py-3 2xl:py-5"
               style={{
                 borderTop: "1px solid rgba(170,115,74,0.25)",
                 background: "rgba(0,0,0,0.18)",
+                divideColor: "rgba(170,115,74,0.25)",
               }}
             >
               {[
@@ -98,9 +99,9 @@ export function HeroSection() {
                 { value: "4 Wochen", label: "bis zum Notartermin" },
                 { value: "32+", label: "abgeschlossene Projekte" },
               ].map((s, i) => (
-                <div key={s.label} className={i === 0 ? "pr-4 md:pr-6 2xl:pr-8" : "px-4 md:px-6 2xl:px-8"}>
-                  <p className="text-base 2xl:text-xl font-nazare text-brand-gold">{s.value}</p>
-                  <p className="text-xs text-white/55 mt-0.5 tracking-wide">{s.label}</p>
+                <div key={s.label} className={`${i === 0 ? "pr-3 md:pr-6" : i === 2 ? "pl-3 md:pl-6" : "px-3 md:px-6"}`}>
+                  <p className="text-sm md:text-base 2xl:text-xl font-nazare text-brand-gold whitespace-nowrap">{s.value}</p>
+                  <p className="text-[10px] md:text-xs text-white/55 mt-0.5 tracking-wide leading-tight">{s.label}</p>
                 </div>
               ))}
             </div>
