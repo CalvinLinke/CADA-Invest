@@ -14,7 +14,7 @@ const projects = [
       { vorher: "/CADA%20Projekt%201/K%C3%BCche%20vorher.jpeg", nachher: "/CADA%20Projekt%201/K%C3%BCche%20nachher.png",  label: "Küche" },
       { vorher: "/CADA%20Projekt%201/Bad%20vorher.png",         nachher: "/CADA%20Projekt%201/Bad%20nachher.png",         label: "Bad" },
     ],
-    title: "Dreiroom-Wohnung, Dresden-Striesen",
+    title: "3-Raumwohnung, Dresden-Striesen",
     meta:  "78 m² · Baujahr 1960 · Vollsaniert 2023",
     text:  "Ankauf einer unsanierten Bestandswohnung. Nach umfassender Modernisierung inklusive neuer Heizungsanlage, Bäder und Bodenbelägen konnte die Immobilie deutlich aufgewertet werden.",
     tags:  ["Vollsanierung", "Neue Heizung", "Modernisierung"],
