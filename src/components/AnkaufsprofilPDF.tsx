@@ -183,6 +183,19 @@ const s = StyleSheet.create({
   contactLine:  { fontFamily: "Inter", fontWeight: 400, fontSize: 9.5, color: WH, marginBottom: 3 },
   qr:           { width: 82, height: 82, backgroundColor: WH, borderRadius: 6, padding: 4 },
   qrLabel:      { fontFamily: "Inter", fontWeight: 400, fontSize: 6, color: WH, textAlign: "center", marginTop: 4, letterSpacing: 0.5 },
+
+  contentFooterRule: {
+    position: "absolute", bottom: 28, left: 56, right: 48,
+    height: 0.5, backgroundColor: GO, opacity: 0.3,
+  },
+  contentFooter: {
+    position: "absolute", bottom: 10, left: 56, right: 48,
+    flexDirection: "row", justifyContent: "space-between",
+  },
+  contentFooterText: {
+    fontFamily: "Inter", fontWeight: 400,
+    fontSize: 7, color: AN, opacity: 0.5,
+  },
 });
 
 // ── Pages ─────────────────────────────────────────────────────────────────────
@@ -212,7 +225,7 @@ function CoverPage() {
       {/* Center content */}
       <View style={s.coverBody}>
         <View style={s.coverAccentLine} />
-        <Text style={s.coverTitle}>Ankaufs{"\n"}profil</Text>
+        <Text style={s.coverTitle}>Ankaufsprofil</Text>
         <Text style={s.coverSubtitle}>
           Direktankauf von Wohnimmobilien{"\n"}im Raum Sachsen
         </Text>
@@ -223,7 +236,7 @@ function CoverPage() {
       <View style={s.coverFooterRule} />
       <View style={s.coverFooter}>
         <Text style={s.coverFooterL}>SACHSEN · DRESDEN · LEIPZIG</Text>
-        <Text style={s.coverFooterR}>2025</Text>
+        <Text style={s.coverFooterR}>2026</Text>
       </View>
     </Page>
   );
@@ -338,6 +351,12 @@ function ContentPage({ qrCode }: { qrCode: string }) {
           </View>
         </View>
 
+      </View>
+
+      <View style={s.contentFooterRule} />
+      <View style={s.contentFooter}>
+        <Text style={s.contentFooterText}>CADA Invest GmbH · Glashütter Straße 53 · 01309 Dresden</Text>
+        <Text style={s.contentFooterText}>HRB 45325 · Amtsgericht Dresden · Info@cada-invest.de</Text>
       </View>
     </Page>
   );
