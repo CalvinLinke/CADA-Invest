@@ -126,14 +126,14 @@ export default function AnkaufPage() {
                     { label: "Aufwand",        cada: "Minimal",       makler: "Hoch" },
                     { label: "Diskretion",     cada: "100 %",         makler: "Öffentlich" },
                   ].map((r) => (
-                    <div key={r.label} className="grid grid-cols-3 text-sm gap-2 pb-3 border-b border-gray-50 last:border-0">
-                      <span className="text-brand-anthracite/50 font-medium">{r.label}</span>
-                      <span className="text-brand-green font-semibold">{r.cada}</span>
-                      <span className="text-brand-anthracite/40">{r.makler}</span>
+                    <div key={r.label} className="grid grid-cols-[2fr_1.5fr_1.5fr] text-xs sm:text-sm gap-x-3 pb-3 border-b border-gray-50 last:border-0">
+                      <span className="text-brand-anthracite/50 font-medium leading-snug">{r.label}</span>
+                      <span className="text-brand-green font-semibold leading-snug">{r.cada}</span>
+                      <span className="text-brand-anthracite/40 leading-snug">{r.makler}</span>
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-3 gap-2 text-xs mt-3 text-brand-anthracite/40">
+                <div className="grid grid-cols-[2fr_1.5fr_1.5fr] gap-x-3 text-xs mt-3 text-brand-anthracite/40">
                   <span />
                   <span className="font-semibold text-brand-green">CADA Invest</span>
                   <span>Makler</span>
