@@ -35,7 +35,7 @@ export default function UeberUnsPage() {
               <span className="text-brand-gold">professionell. diskret. lokal.</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/65 max-w-lg">
-              Seit über 7 Jahren kaufen wir Wohnimmobilien in Sachsen an, transparent, schnell und ohne Aufwand für den Verkäufer.
+              Unser Fokus liegt auf dem Ankauf von Wohnimmobilien in Sachsen, unkompliziert, transparent und effizient.
             </motion.p>
           </motion.div>
         </div>
@@ -61,10 +61,10 @@ export default function UeberUnsPage() {
               </motion.h2>
               <motion.div variants={fadeUp} className="space-y-4 text-brand-anthracite/70 leading-relaxed">
                 <p>
-                  CADA Invest GmbH ist kein klassischer Makler und kein Bauträger. Wir sind ein professioneller, diskret agierender Bestandshändler mit Fokus auf den Direktankauf, die Aufwertung und den Weiterverkauf von Wohnimmobilien in Sachsen.
+                  CADA Invest GmbH ist kein klassischer Makler und kein Bauträger. Wir sind ein professioneller, diskret agierender Bestandshalter mit Fokus auf den Direktankauf und die Aufwertung von Wohnimmobilien in Sachsen.
                 </p>
                 <p>
-                  Ob Eigentümer, Makler oder Netzwerkpartner: Wir sind der verlässliche Ansprechpartner für diskrete, schnelle Immobilientransaktionen in Sachsen. Kein Inserat, keine Besichtigungsgruppen, kein monatelanger Verkaufsprozess.
+                  Ob Eigentümer, Makler oder Netzwerkpartner: Wir sind der verlässliche Ansprechpartner für diskrete, schnelle Immobilientransaktionen in Sachsen.
                 </p>
                 <p>
                   Was uns unterscheidet, ist die Kombination aus Markterfahrung, Entscheidungsgeschwindigkeit und einem starken lokalen Netzwerk in Dresden und ganz Sachsen.
