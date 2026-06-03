@@ -39,7 +39,7 @@ export function Footer() {
               className="brightness-0 invert opacity-90 mb-8"
             />
             <p className="text-sm leading-relaxed text-white/45 max-w-xs mb-6">
-              Professioneller Immobilienankäufer im Raum Sachsen. Diskret, effizient, verlässlich.
+              Ihr professioneller Partner für Immobilienankauf in Sachsen. Diskret, effizient, verlässlich.
             </p>
             <a
               href="/api/ankaufsprofil"
