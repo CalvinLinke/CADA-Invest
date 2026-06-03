@@ -77,8 +77,7 @@ export default function ImpressumPage() {
               <p className="text-brand-anthracite/70 leading-relaxed">
                 Eingetragen im Handelsregister.<br />
                 Registergericht: Amtsgericht Dresden<br />
-                Registernummer: HRB 45325<br />
-                Stammkapital: 25.000,00 €
+                Registernummer: HRB 45325
               </p>
             </div>
 
