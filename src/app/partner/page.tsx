@@ -9,15 +9,17 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/animations";
 
 const criteria = [
-  "Lage: Sachsen — insbesondere Dresden, Leipzig, Chemnitz",
+  "Lage: Sachsen, insbesondere Dresden, Leipzig, Chemnitz",
   "Wohnimmobilien: Einzelwohnungen, Pakete, Mehrfamilienhäuser",
-  "Zustand: beliebig — auch sanierungsbedürftig",
+  "Zustand: beliebig, auch sanierungsbedürftig",
   "Größe: ab ca. 30 m² bis Mehrfamilienhäuser",
+  "Leerstand: leerstehende oder leerwerdende Immobilien",
   "Off-Market-Objekte bevorzugt, diskret",
 ];
 
 export default function PartnerPage() {
-  const [form, setForm]       = useState({ name: "", email: "", telefon: "", objekt: "", nachricht: "" });
+  const [form, setForm]       = useState({ name: "", email: "", telefon: "", immobilienart: "", adresse: "", groesse: "", zustand: "", anmerkungen: "" });
+  const [step, setStep]       = useState<1 | 2>(1);
   const [sent, setSent]       = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -73,7 +75,7 @@ export default function PartnerPage() {
       {/* Für Partner */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               variants={staggerContainer}
               initial="hidden"
@@ -92,7 +94,7 @@ export default function PartnerPage() {
                   { t: "Schnelle Entscheidungen",       d: "Klare Rückmeldung innerhalb von 24–48 Stunden nach Einreichen eines Objekts." },
                   { t: "Faire Partnerkonditionen",      d: "Für Vermittler attraktive Vermittlungsgebühren bei erfolgreichen Transaktionen." },
                   { t: "Diskrete Abwicklung",           d: "Off-Market-Objekte werden vertraulich behandelt." },
-                  { t: "Zuverlässige Abschlüsse",       d: "Wir stehen zu unseren Angeboten. Keine Nachverhandlungen nach Besichtigung." },
+                  { t: "Zuverlässige Abschlüsse",       d: "Wir stehen zu unseren Angeboten." },
                 ].map((i) => (
                   <motion.div key={i.t} variants={fadeUp} className="flex items-start gap-4">
                     <RuneIcon size={16} className="text-brand-gold mt-1 shrink-0" />
@@ -147,11 +149,11 @@ export default function PartnerPage() {
               </p>
               <RuneDivider className="max-w-[180px]" />
               <h2 className="text-3xl md:text-4xl font-nazare text-brand-anthracite mt-5 mb-5 leading-tight">
-                Unser Ankaufsprofil —{" "}
+                Unser Ankaufsprofil:{" "}
                 <span className="text-brand-green">kompakt & klar</span>
               </h2>
               <p className="text-brand-anthracite/60 leading-relaxed mb-8 max-w-md">
-                Standorte, Objekttypen, Ankaufskriterien und Kontaktdaten auf zwei Seiten — hochwertig gestaltet, direkt weiterleitbar.
+                Standorte, Objekttypen, Ankaufskriterien und Kontaktdaten kompakt auf einer Seite, hochwertig gestaltet und direkt weiterleitbar.
               </p>
 
               {/* Download stats row */}
@@ -261,7 +263,7 @@ export default function PartnerPage() {
                 <span className="text-brand-gold">der verkaufen möchte?</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="text-white/55 leading-relaxed mb-8 max-w-lg">
-                Geben Sie uns den Hinweis — kein Aufwand, keine Verpflichtung. Nach erfolgreichem Notartermin erhalten Sie Ihre Prämie.
+                Geben Sie uns den Hinweis, kein Aufwand, keine Verpflichtung. Nach erfolgreichem Notartermin erhalten Sie Ihre Prämie.
               </motion.p>
               <motion.div variants={fadeUp}>
                 <a
@@ -314,38 +316,100 @@ export default function PartnerPage() {
               <p className="text-brand-anthracite/60 text-sm">Wir melden uns innerhalb von 24 Stunden.</p>
             </div>
           ) : (
-            <form onSubmit={submit} className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 space-y-4">
-              <div>
-                <label className={lbl}>Name</label>
-                <input type="text" className={inp} required value={form.name} onChange={(e) => update("name", e.target.value)} placeholder="Max Mustermann" />
+            <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100">
+              {/* Step indicator */}
+              <div className="flex items-center gap-2 mb-8">
+                {([1, 2] as const).map((s) => (
+                  <div key={s} className="flex items-center gap-2">
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${step >= s ? "bg-brand-green text-white" : "bg-gray-100 text-gray-400"}`}>
+                      {step > s ? "✓" : s}
+                    </div>
+                    <span className={`text-xs font-medium hidden sm:block ${step >= s ? "text-brand-green" : "text-gray-400"}`}>
+                      {s === 1 ? "Kontaktdaten" : "Objektdaten"}
+                    </span>
+                    {s < 2 && <div className={`w-8 h-px ${step > s ? "bg-brand-green" : "bg-gray-200"}`} />}
+                  </div>
+                ))}
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className={lbl}>E-Mail</label>
-                  <input type="email" className={inp} required value={form.email} onChange={(e) => update("email", e.target.value)} />
+
+              {step === 1 && (
+                <div className="space-y-4">
+                  <div>
+                    <label className={lbl}>Name</label>
+                    <input type="text" className={inp} required value={form.name} onChange={(e) => update("name", e.target.value)} placeholder="Max Mustermann" />
+                  </div>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className={lbl}>E-Mail</label>
+                      <input type="email" className={inp} required value={form.email} onChange={(e) => update("email", e.target.value)} />
+                    </div>
+                    <div>
+                      <label className={lbl}>Telefon</label>
+                      <input type="tel" className={inp} value={form.telefon} onChange={(e) => update("telefon", e.target.value)} />
+                    </div>
+                  </div>
+                  <div className="pt-2">
+                    <Button
+                      onClick={() => setStep(2)}
+                      variant="primary" size="md"
+                      disabled={!form.name || !form.email}
+                    >
+                      Weiter
+                    </Button>
+                  </div>
                 </div>
-                <div>
-                  <label className={lbl}>Telefon</label>
-                  <input type="tel" className={inp} value={form.telefon} onChange={(e) => update("telefon", e.target.value)} />
-                </div>
-              </div>
-              <div>
-                <label className={lbl}>Objekt (Adresse / Eckdaten)</label>
-                <input type="text" className={inp} value={form.objekt} onChange={(e) => update("objekt", e.target.value)} placeholder="Musterstr. 5, 01069 Dresden, 3 WE, 245 m²" />
-              </div>
-              <div>
-                <label className={lbl}>Nachricht</label>
-                <textarea className={`${inp} resize-none h-28`} value={form.nachricht} onChange={(e) => update("nachricht", e.target.value)} placeholder="Weitere Informationen zum Objekt..." />
-              </div>
-              {error && (
-                <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">{error}</p>
               )}
-              <div className="pt-2">
-                <Button type="submit" variant="primary" size="md" disabled={loading}>
-                  {loading ? "Wird gesendet..." : "Objekt einreichen"}
-                </Button>
-              </div>
-            </form>
+
+              {step === 2 && (
+                <form onSubmit={submit} className="space-y-4">
+                  <div>
+                    <label className={lbl}>Immobilienart</label>
+                    <select className={inp} required value={form.immobilienart} onChange={(e) => update("immobilienart", e.target.value)}>
+                      <option value="">Bitte auswählen</option>
+                      <option>Eigentumswohnung</option>
+                      <option>Mehrfamilienhaus</option>
+                      <option>Wohnungspaket</option>
+                      <option>Einfamilienhaus / DHH</option>
+                      <option>Sonstiges</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className={lbl}>Adresse</label>
+                    <input type="text" className={inp} value={form.adresse} onChange={(e) => update("adresse", e.target.value)} placeholder="Musterstraße 5, 01069 Dresden" />
+                  </div>
+                  <div>
+                    <label className={lbl}>Größe (m²)</label>
+                    <input type="number" className={inp} value={form.groesse} onChange={(e) => update("groesse", e.target.value)} placeholder="75" />
+                  </div>
+                  <div>
+                    <label className={lbl}>Zustand</label>
+                    <select className={inp} value={form.zustand} onChange={(e) => update("zustand", e.target.value)}>
+                      <option value="">Bitte auswählen</option>
+                      <option>Bewohnt / Vermietet</option>
+                      <option>Leerstehend</option>
+                      <option>Leerwerdend (demnächst frei)</option>
+                      <option>Renovierungsbedürftig</option>
+                      <option>Sanierungsbedürftig</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className={lbl}>Anmerkungen</label>
+                    <textarea className={`${inp} resize-none h-24`} value={form.anmerkungen} onChange={(e) => update("anmerkungen", e.target.value)} placeholder="Weitere Informationen zum Objekt..." />
+                  </div>
+                  {error && (
+                    <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">{error}</p>
+                  )}
+                  <div className="flex items-center justify-between pt-2">
+                    <button type="button" onClick={() => setStep(1)} className="text-sm text-brand-anthracite/50 hover:text-brand-anthracite transition-colors">
+                      ← Zurück
+                    </button>
+                    <Button type="submit" variant="primary" size="md" disabled={loading}>
+                      {loading ? "Wird gesendet..." : "Objekt einreichen"}
+                    </Button>
+                  </div>
+                </form>
+              )}
+            </div>
           )}
         </div>
       </section>
