@@ -228,7 +228,7 @@ function CoverPage() {
         <View style={s.coverAccentLine} />
         <Text style={s.coverTitle}>Ankaufsprofil</Text>
         <Text style={s.coverSubtitle}>
-          Direktankauf von Wohnimmobilien{"\n"}im Raum Sachsen
+          Direktankauf von Wohn- und{"\n"}Gewerbeimmobilien im Raum Sachsen
         </Text>
         <View style={s.coverAccentLine2} />
       </View>
@@ -267,10 +267,9 @@ function ContentPage({ qrCodeCalvin, qrCodeDave }: { qrCodeCalvin: string; qrCod
         <View style={s.aboutBox}>
           <Text style={s.aboutLabel}>ÜBER CADA INVEST</Text>
           <Text style={s.aboutText}>
-            CADA Invest GmbH ist ein auf den Direktankauf spezialisiertes Unternehmen für
-            Wohnimmobilien im Raum Sachsen. Mit über 32 realisierten Projekten und 7 Jahren
-            Markterfahrung bieten wir eine diskrete, schnelle und transparente Alternative
-            zum klassischen Immobilienverkauf, vom ersten Kontakt bis zur Schlüsselübergabe.
+            Die CADA Invest GmbH kauft Wohn- und Gewerbeimmobilien in Sachsen direkt an.
+            Eigentümer, Makler und Partner profitieren von einem diskreten, schnellen und
+            unkomplizierten Verkaufsprozess – ohne lange Wartezeiten und unnötigen Aufwand.
           </Text>
         </View>
 
@@ -286,9 +285,7 @@ function ContentPage({ qrCodeCalvin, qrCodeDave }: { qrCodeCalvin: string; qrCod
             <View style={s.locationBox}>
               <Text style={s.locationText}>
                 Dresden · Leipzig{"\n"}
-                Radebeul · Freital · Pirna{"\n"}
-                Kesselsdorf · Bannewitz{"\n"}
-                Weinböhla
+                und Umgebung
               </Text>
             </View>
           </View>
@@ -297,11 +294,10 @@ function ContentPage({ qrCodeCalvin, qrCodeDave }: { qrCodeCalvin: string; qrCod
           <View style={{ flex: 1.6 }}>
             <Text style={s.sLabel}>OBJEKTTYPEN</Text>
             {[
-              "Leerstehende Wohnungen ab 30 m²",
-              "Vermietete Wohnungen mit Entwicklungspotenzial",
-              "Sanierungsbedürftige Wohnungen",
+              "Leerstehende oder leerwerdende Wohnungen ab 30 m²",
+              "Auch sanierungsbedürftige Wohnungen",
               "Wohnungspakete bis 500 m²",
-              "Wohnhäuser mit Leerstandsquote > 50 %",
+              "Mehrfamilienhäuser mit Leerstandsquote > 50 %",
             ].map((t) => (
               <View key={t} style={s.bulletRow}>
                 <View style={s.bulletDot} />
