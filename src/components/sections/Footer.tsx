@@ -18,6 +18,8 @@ const legal = [
   { label: "FAQ",                  href: "/ankauf#faq" },
 ];
 
+const forInvestors = { label: "Für Investoren", href: "/investoren" };
+
 export function Footer() {
   return (
     <footer className="bg-brand-anthracite text-white/70 relative overflow-hidden">
@@ -98,7 +100,15 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
           <p>© {new Date().getFullYear()} CADA Invest GmbH. Alle Rechte vorbehalten.</p>
-          <p className="text-white/20">Sachsen · Dresden · Leipzig</p>
+          <div className="flex items-center gap-6">
+            <Link
+              href={forInvestors.href}
+              className="text-white/20 hover:text-white/45 transition-colors duration-150"
+            >
+              {forInvestors.label}
+            </Link>
+            <p className="text-white/20">Sachsen · Dresden · Leipzig</p>
+          </div>
         </div>
       </div>
     </footer>
