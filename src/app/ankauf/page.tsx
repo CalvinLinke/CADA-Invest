@@ -17,17 +17,17 @@ const targetGroups = [
 ];
 
 const advantages = [
-  { label: "Transparent",      icon: "✓", text: "Klarer Kaufpreis, keine versteckten Kosten. Sie wissen von Anfang an, woran Sie sind." },
+  { label: "Transparent",      icon: "✓", text: "Klarer Kaufpreis, keine versteckten Kosten." },
   { label: "Schnell",          icon: "✓", text: "Angebot in 48 Stunden, Notartermin in unter 4 Wochen." },
   { label: "Sicher",           icon: "✓", text: "Ein Wort gilt. Unser Angebot bleibt verbindlich, auch nach der Besichtigung." },
   { label: "Vollständig",      icon: "✓", text: "Wir übernehmen alle Unterlagen, Koordination und Abstimmung." },
-  { label: "Diskret",          icon: "✓", text: "Kein Inserat, keine Besichtigungsgruppen. Ihr Verkauf bleibt diskret und vertraulich." },
+  { label: "Diskret",          icon: "✓", text: "Ihr Verkauf bleibt diskret und vertraulich." },
 ];
 
 const faqs = [
   {
     q: "Was kauft CADA Invest?",
-    a: "Wir kaufen Einzelwohnungen, kleinere Wohnungspakete und Mehrfamilienhäuser im Raum Sachsen, unabhängig vom Zustand. Dazu zählen leerstehende und leerwerdende Objekte ebenso wie sanierungsbedürftige Immobilien.",
+    a: "Wir erwerben leerstehende und leerwerdende Einzelwohnungen, Wohnungspakete sowie Mehrfamilienhäuser in Sachsen, unabhängig vom Zustand.",
   },
   {
     q: "Wie lange dauert der gesamte Prozess?",
@@ -70,7 +70,7 @@ export default function AnkaufPage() {
               <span className="text-brand-gold">ohne Aufwand.</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/65 max-w-lg">
-              Keine Besichtigungsgruppen. Keine lange Wartezeit. Wir kaufen direkt, transparent und verlässlich.
+              Keine lange Wartezeit. Wir kaufen direkt, transparent und verlässlich.
             </motion.p>
           </motion.div>
         </div>
@@ -91,7 +91,7 @@ export default function AnkaufPage() {
               </motion.p>
               <RuneDivider className="max-w-xs mb-6" />
               <motion.h2 variants={slideInLeft} className="text-4xl md:text-5xl font-nazare text-brand-anthracite mb-6">
-                Für wen ist der Direktverkauf geeignet?
+                Für wen ist der Verkauf an uns geeignet?
               </motion.h2>
               <motion.p variants={slideInLeft} className="text-brand-anthracite/65 mb-8 leading-relaxed">
                 Unser Angebot richtet sich an Eigentümer, die einen einfachen, sicheren und schnellen Verkaufsprozess bevorzugen.
@@ -116,7 +116,7 @@ export default function AnkaufPage() {
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 relative overflow-hidden">
                 <RuneIcon size={120} className="absolute -top-4 -right-4 text-brand-gold/[0.07] pointer-events-none" />
                 <p className="text-[11px] font-semibold tracking-[0.15em] uppercase text-brand-gold mb-4">
-                  Direktankauf vs. Eigenverkauf
+                  Direktankauf vs. Privatperson
                 </p>
                 <div className="space-y-4">
                   {[
@@ -190,11 +190,11 @@ export default function AnkaufPage() {
               </motion.p>
               <RuneDivider light className="max-w-[180px]" />
               <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-nazare text-white mt-5 mb-5 leading-tight">
-                Unsere Kriterien:{" "}
-                <span className="text-brand-gold">direkt weiterleitbar</span>
+                Unsere Ankaufskriterien.<br />
+                <span className="text-brand-gold">Alles auf einen Blick.</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="text-white/60 leading-relaxed mb-8 max-w-lg">
-                Ob für sich selbst oder für Ihr Netzwerk: Unser Ankaufsprofil fasst alle relevanten Informationen kompakt zusammen: Standorte, Objekttypen, Prozess und persönlicher Kontakt.
+                Alle Ankaufskriterien, Standorte und Kontaktdaten kompakt auf einer Seite. Ideal zum Weiterleiten an Eigentümer oder Netzwerkpartner.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-start">
@@ -304,7 +304,7 @@ export default function AnkaufPage() {
 
       <CtaSection
         headline="Bereit für den nächsten Schritt?"
-        subtext="Wir kaufen Ihre Immobilie, diskret, schnell und ohne Aufwand für Sie. Anfrage dauert 2 Minuten."
+        subtext="Wir kaufen Ihre Immobilie, diskret, schnell und ohne Aufwand für Sie. Eine Anfrage dauert lediglich 2 Minuten."
       />
     </>
   );
