@@ -59,12 +59,12 @@ export function HeroSection() {
 
             <div className="px-6 py-7 md:px-8 xl:py-7 2xl:px-10 2xl:py-12">
               <h1 className="text-4xl sm:text-5xl xl:text-[2.25rem] 2xl:text-[4.25rem] font-nazare text-white leading-[1.1] mb-3 2xl:mb-5">
-                Wir kaufen Ihre Immobilie:{" "}
+                Wir kaufen Ihre Immobilie:<br />
                 <span className="text-brand-gold">diskret, schnell und ohne Aufwand.</span>
               </h1>
 
               <p className="text-sm xl:text-[0.9rem] 2xl:text-lg text-white/75 leading-relaxed mb-5 2xl:mb-10 max-w-lg">
-                Wohn- und Gewerbeimmobilien in Sachsen. Ihr verlässlicher Partner für Eigentümer, Makler und Tippgeber.
+                Ihr verlässlicher Partner für Wohn- und Gewerbeimmobilien in Sachsen, für Eigentümer, Makler und Tippgeber.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 2xl:gap-4">
