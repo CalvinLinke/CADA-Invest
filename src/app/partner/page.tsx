@@ -12,9 +12,8 @@ const criteria = [
   "Lage: Sachsen, insbesondere Dresden, Leipzig, Chemnitz",
   "Wohnimmobilien: Einzelwohnungen, Pakete, Mehrfamilienhäuser",
   "Zustand: beliebig, auch sanierungsbedürftig",
-  "Größe: ab ca. 30 m² bis Mehrfamilienhäuser",
+  "Größe: ab ca. 40 m² bis Mehrfamilienhäuser",
   "Leerstand: leerstehende oder leerwerdende Immobilien",
-  "Off-Market-Objekte bevorzugt, diskret",
 ];
 
 export default function PartnerPage() {
@@ -153,7 +152,7 @@ export default function PartnerPage() {
                 <span className="text-brand-green">kompakt & klar</span>
               </h2>
               <p className="text-brand-anthracite/60 leading-relaxed mb-8 max-w-md">
-                Standorte, Objekttypen, Ankaufskriterien und Kontaktdaten kompakt auf einer Seite, hochwertig gestaltet und direkt weiterleitbar.
+                Standorte, Objekttypen, Ankaufskriterien und Kontaktdaten kompakt in einer Broschüre.
               </p>
 
               {/* Download stats row */}
