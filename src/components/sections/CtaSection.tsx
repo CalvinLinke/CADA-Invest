@@ -26,13 +26,6 @@ export function CtaSection({
           whileInView="visible"
           viewport={viewportOnce}
         >
-          <motion.p
-            variants={fadeUp}
-            className="text-[11px] font-semibold tracking-[0.18em] uppercase text-brand-gold/70 mb-6"
-          >
-            Ihr nächster Schritt
-          </motion.p>
-
           <motion.h2
             variants={fadeUp}
             className="text-4xl md:text-5xl lg:text-6xl font-nazare text-white mb-6 leading-tight"
