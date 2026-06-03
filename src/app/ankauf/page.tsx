@@ -10,24 +10,24 @@ import { staggerContainer, fadeUp, slideInLeft, slideInRight, viewportOnce } fro
 
 const targetGroups = [
   "Einzelwohnungen und kleine Wohnungspakete",
-  "Erbengemeinschaften mit Klärungsbedarf",
-  "Eigentümer mit Zeitdruck oder Unsicherheit",
+  "Erbengemeinschaften",
+  "Insolvenzverwalter",
   "Verkäufer, die Diskretion schätzen",
-  "Eigentümer ohne Marktkenntnis",
+  "Eigentümer mit Leerstand oder leerwerdenden Einheiten",
 ];
 
 const advantages = [
-  { label: "Direktankauf",     icon: "✓", text: "Kein Makler, keine Provision, kein Aufwand für Sie." },
+  { label: "Transparent",      icon: "✓", text: "Klarer Kaufpreis, keine versteckten Kosten. Sie wissen von Anfang an, woran Sie sind." },
   { label: "Schnell",          icon: "✓", text: "Angebot in 48 Stunden, Notartermin in unter 4 Wochen." },
-  { label: "Sicher",           icon: "✓", text: "Fester Kaufpreis, keine Preisverhandlung nach Besichtigung." },
+  { label: "Sicher",           icon: "✓", text: "Ein Wort gilt. Unser Angebot bleibt verbindlich, auch nach der Besichtigung." },
   { label: "Vollständig",      icon: "✓", text: "Wir übernehmen alle Unterlagen, Koordination und Abstimmung." },
-  { label: "Diskret",          icon: "✓", text: "Kein öffentliches Inserat, keine Besichtigungsgruppen." },
+  { label: "Diskret",          icon: "✓", text: "Kein Inserat, keine Besichtigungsgruppen. Ihr Verkauf bleibt diskret und vertraulich." },
 ];
 
 const faqs = [
   {
     q: "Was kauft CADA Invest?",
-    a: "Wir kaufen Einzelwohnungen, kleinere Wohnungspakete und Mehrfamilienhäuser im Raum Sachsen — unabhängig vom Zustand. Auch sanierungsbedürftige Objekte werden bewertet.",
+    a: "Wir kaufen Einzelwohnungen, kleinere Wohnungspakete und Mehrfamilienhäuser im Raum Sachsen, unabhängig vom Zustand. Dazu zählen leerstehende und leerwerdende Objekte ebenso wie sanierungsbedürftige Immobilien.",
   },
   {
     q: "Wie lange dauert der gesamte Prozess?",
@@ -35,15 +35,15 @@ const faqs = [
   },
   {
     q: "Entstehen für mich Kosten?",
-    a: "Nein. Die Bewertung ist kostenlos und unverbindlich. Maklercourtage und sonstige Nebenkosten entfallen beim Direktverkauf an uns.",
+    a: "Für Sie entstehen keinerlei Kosten. Unser Angebot ist kostenlos und vollständig unverbindlich. Anfallende Nebenkosten übernehmen wir.",
   },
   {
     q: "Muss die Immobilie renoviert sein?",
-    a: "Nein. Wir kaufen Immobilien in jedem Zustand — auch stark sanierungsbedürftige Objekte oder solche mit baulichen Mängeln.",
+    a: "Nein. Wir kaufen Immobilien in jedem Zustand, auch stark sanierungsbedürftige Objekte oder solche mit baulichen Mängeln.",
   },
   {
     q: "Ich bin Teil einer Erbengemeinschaft. Ist das möglich?",
-    a: "Ja. Wir haben Erfahrung mit Erbfällen und unterstützen bei der Koordination. Sprechen Sie uns an — wir finden gemeinsam eine Lösung.",
+    a: "Ja. Wir haben Erfahrung mit Erbfällen und unterstützen bei der Koordination. Sprechen Sie uns an, wir finden gemeinsam eine Lösung.",
   },
 ];
 
@@ -66,11 +66,11 @@ export default function AnkaufPage() {
               <Badge variant="white" className="mb-8">Immobilienankauf</Badge>
             </motion.div>
             <motion.h1 variants={fadeUp} className="text-5xl md:text-6xl font-nazare text-white mb-6">
-              Verkaufen Sie Ihre Immobilie —{" "}
+              Verkaufen Sie Ihre Immobilie:{" "}
               <span className="text-brand-gold">ohne Aufwand.</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/65 max-w-lg">
-              Kein Makler. Keine Besichtigungsgruppen. Kein langer Wartezeit. Wir kaufen direkt — transparent und verlässlich.
+              Keine Besichtigungsgruppen. Keine lange Wartezeit. Wir kaufen direkt, transparent und verlässlich.
             </motion.p>
           </motion.div>
         </div>
@@ -111,18 +111,17 @@ export default function AnkaufPage() {
               initial="hidden"
               whileInView="visible"
               viewport={viewportOnce}
-              className="md:-mt-8"
+
             >
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 relative overflow-hidden">
                 <RuneIcon size={120} className="absolute -top-4 -right-4 text-brand-gold/[0.07] pointer-events-none" />
                 <p className="text-[11px] font-semibold tracking-[0.15em] uppercase text-brand-gold mb-4">
-                  Direktankauf vs. Maklerverkauf
+                  Direktankauf vs. Eigenverkauf
                 </p>
                 <div className="space-y-4">
                   {[
                     { label: "Angebotsdauer",  cada: "48 Stunden",   makler: "Wochen" },
                     { label: "Verkaufsdauer",  cada: "< 4 Wochen",   makler: "3–12 Monate" },
-                    { label: "Provision",      cada: "Keine",         makler: "3–7 %" },
                     { label: "Aufwand",        cada: "Minimal",       makler: "Hoch" },
                     { label: "Diskretion",     cada: "100 %",         makler: "Öffentlich" },
                   ].map((r) => (
@@ -132,11 +131,6 @@ export default function AnkaufPage() {
                       <span className="text-brand-anthracite/40 leading-snug">{r.makler}</span>
                     </div>
                   ))}
-                </div>
-                <div className="grid grid-cols-[2fr_1.5fr_1.5fr] gap-x-3 text-xs mt-3 text-brand-anthracite/40">
-                  <span />
-                  <span className="font-semibold text-brand-green">CADA Invest</span>
-                  <span>Makler</span>
                 </div>
               </div>
             </motion.div>
@@ -196,11 +190,11 @@ export default function AnkaufPage() {
               </motion.p>
               <RuneDivider light className="max-w-[180px]" />
               <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-nazare text-white mt-5 mb-5 leading-tight">
-                Unsere Kriterien —{" "}
+                Unsere Kriterien:{" "}
                 <span className="text-brand-gold">direkt weiterleitbar</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="text-white/60 leading-relaxed mb-8 max-w-lg">
-                Ob für sich selbst oder für Ihr Netzwerk: Unser Ankaufsprofil fasst alle relevanten Informationen kompakt zusammen — Standorte, Objekttypen, Prozess und persönlicher Kontakt.
+                Ob für sich selbst oder für Ihr Netzwerk: Unser Ankaufsprofil fasst alle relevanten Informationen kompakt zusammen: Standorte, Objekttypen, Prozess und persönlicher Kontakt.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-start">
@@ -302,7 +296,7 @@ export default function AnkaufPage() {
           </div>
           <div className="text-center mt-12">
             <Button href="/immobilienbewertung" variant="primary" size="lg">
-              Jetzt Bewertung anfragen
+              Kostenloses Kaufangebot erhalten
             </Button>
           </div>
         </div>
@@ -310,7 +304,7 @@ export default function AnkaufPage() {
 
       <CtaSection
         headline="Bereit für den nächsten Schritt?"
-        subtext="Wir kaufen Ihre Immobilie — diskret, schnell und ohne Aufwand für Sie. Anfrage dauert 2 Minuten."
+        subtext="Wir kaufen Ihre Immobilie, diskret, schnell und ohne Aufwand für Sie. Anfrage dauert 2 Minuten."
       />
     </>
   );
