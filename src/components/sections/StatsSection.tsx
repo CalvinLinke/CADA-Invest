@@ -6,7 +6,7 @@ import { staggerContainer, fadeUp, viewportOnce } from "@/lib/animations";
 
 const stats = [
   { value: 32,  suffix: "+", label: "realisierte Projekte",  sub: "in Sachsen" },
-  { value: 7,   suffix: "",  label: "Jahre Markterfahrung",  sub: "seit 2017" },
+  { value: 7,   suffix: "",  label: "Jahre Immobilienerfahrung",  sub: "der Gründer" },
   { value: 48,  suffix: "h", label: "bis zum Angebot",       sub: "garantiert" },
   { value: 100, suffix: "%", label: "Prozessübernahme",      sub: "von A bis Z" },
 ];
