@@ -26,11 +26,11 @@ export function AnkaufsprofilBand() {
             </motion.p>
             <RuneDivider light className="max-w-[180px]" />
             <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-nazare text-white mt-5 mb-5 leading-tight">
-              Wir kaufen aktiv an —{" "}
-              <span className="text-brand-gold">nehmen Sie unser Profil mit</span>
+              Unsere Ankaufskriterien.{" "}
+              <span className="text-brand-gold">Kompakt und direkt weiterleitbar.</span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-white/55 leading-relaxed mb-8 max-w-lg">
-              Alle Ankaufskriterien, Standorte und Kontaktdaten kompakt auf zwei Seiten. Ideal zum Weiterleiten an Eigentümer oder Netzwerkpartner.
+              Alle Ankaufskriterien, Standorte und Kontaktdaten kompakt auf einer Seite. Ideal zum Weiterleiten an Eigentümer oder Netzwerkpartner.
             </motion.p>
 
             {/* Bullet points */}
