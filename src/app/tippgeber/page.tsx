@@ -8,9 +8,9 @@ import { Badge } from "@/components/ui/Badge";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/animations";
 
 const privateItems = [
-  "Nachbarn oder Bekannte, die über Verkauf nachdenken",
-  "Familienmitglieder mit geerbten Immobilien",
-  "Bekannte in finanziellen Engpässen",
+  "Eigentümer aus Ihrem Netzwerk mit Verkaufsabsicht",
+  "Erben, die eine Immobilie unkompliziert veräußern möchten",
+  "Eigentümer in Veränderungssituationen, die schnell handeln möchten",
   "Eigentümer, die diskret verkaufen möchten",
 ];
 
@@ -18,7 +18,6 @@ const proItems = [
   "Makler mit Objekten außerhalb des eigenen Fokus",
   "Steuerberater & Anwälte mit Mandantensituationen",
   "Hausverwalter mit verkaufswilligen Eigentümern",
-  "Notare mit Kenntnis bevorstehender Transaktionen",
   "Banken & Finanzberater",
 ];
 
@@ -74,7 +73,7 @@ export default function TippgeberPage() {
               <span className="text-brand-gold">der verkaufen möchte?</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/65 max-w-lg">
-              Geben Sie uns den Hinweis — wir übernehmen alles Weitere. Bei erfolgreichem Abschluss erhalten Sie eine Prämie von bis zu <strong className="text-white/90">2.500 €</strong>.
+              Geben Sie uns den Hinweis, wir übernehmen alles Weitere. Bei erfolgreichem Abschluss erhalten Sie eine Prämie von bis zu <strong className="text-white/90">2.500 €</strong>.
             </motion.p>
           </motion.div>
         </div>
@@ -100,17 +99,17 @@ export default function TippgeberPage() {
               {
                 n: "01",
                 title: "Sie kennen einen Eigentümer",
-                text: "Eine Immobilie in Sachsen, ein Eigentümer mit Verkaufswunsch — mehr braucht es nicht.",
+                text: "Eine Immobilie in Sachsen, ein Eigentümer mit Verkaufswunsch. Mehr braucht es nicht.",
               },
               {
                 n: "02",
                 title: "Sie geben uns den Hinweis",
-                text: "Diskret, unkompliziert — per Formular oder telefonisch. Keine Verpflichtung, kein Aufwand.",
+                text: "Diskret, unkompliziert, per Formular oder telefonisch. Keine Verpflichtung, kein Aufwand.",
               },
               {
                 n: "03",
                 title: "Sie erhalten Ihre Prämie",
-                text: "Nach erfolgreichem Notartermin zahlen wir Ihre Tippgeberprämie — schnell und zuverlässig.",
+                text: "Nach erfolgreichem Notartermin zahlen wir Ihre Tippgeberprämie, schnell und zuverlässig.",
               },
             ].map((s) => (
               <motion.div
@@ -139,7 +138,7 @@ export default function TippgeberPage() {
             <p className="text-6xl md:text-7xl font-nazare text-brand-gold leading-none mb-2">1.000 –</p>
             <p className="text-6xl md:text-7xl font-nazare text-brand-gold leading-none mb-5">2.500 €</p>
             <p className="text-sm text-brand-anthracite/55 max-w-xs mx-auto leading-relaxed">
-              Tippgeberprämie nach erfolgreichem Notartermin — unabhängig vom Kaufpreis der Immobilie.
+              Tippgeberprämie nach erfolgreichem Notartermin, unabhängig vom Kaufpreis der Immobilie.
             </p>
           </motion.div>
         </div>
@@ -203,7 +202,7 @@ export default function TippgeberPage() {
             <RuneDivider className="max-w-xs mx-auto" />
             <h2 className="text-4xl font-nazare text-brand-anthracite mt-4">Tippgeber werden</h2>
             <p className="text-brand-anthracite/55 mt-3 text-sm">
-              Hinterlassen Sie Ihre Kontaktdaten — wir melden uns innerhalb von 24 Stunden.
+              Hinterlassen Sie Ihre Kontaktdaten, wir melden uns innerhalb von 24 Stunden.
             </p>
           </div>
 
