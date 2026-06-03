@@ -381,12 +381,12 @@ export default function BewertungPage() {
           >
             {[
               {
-                quote: "Meine Geschwister und ich hätten das alleine nie so schnell gelöst. Calvin hat uns in zwei Telefonaten alle Fragen beantwortet, drei Wochen später war der Notartermin. Eine echte Erleichterung.",
+                quote: "Meine Geschwister und ich hätten das alleine nie so schnell gelöst. In zwei Telefonaten wurden alle Fragen geklärt, drei Wochen später war der Notartermin. Eine echte Erleichterung.",
                 name: "S. Richter",
                 context: "Erbengemeinschaft · Dresden-Löbtau",
               },
               {
-                quote: "Wenn ein Objekt nicht in mein Portfolio passt, gebe ich es an CADA weiter. Klare Rückmeldung, kein Nachverhandeln, verlässliche Abwicklung. Das ist in dieser Branche nicht selbstverständlich.",
+                quote: "Ich arbeite regelmäßig mit CADA zusammen. Die Kommunikation ist direkt, Entscheidungen werden zügig getroffen und Zusagen eingehalten. So stelle ich mir eine professionelle Zusammenarbeit vor.",
                 name: "T. Hoffmann",
                 context: "Immobilienmakler · Dresden",
               },
