@@ -25,7 +25,7 @@ const projects = [
         label:   "Bad",
       },
     ],
-    title: "Dreiroom-Wohnung, Dresden-Striesen",
+    title: "3-Raumwohnung, Dresden-Striesen",
     meta:  "78 m² · Baujahr 1960 · Vollsaniert",
     text:
       "Ankauf einer unsanierten Bestandswohnung. Nach umfassender Modernisierung konnte die Immobilie deutlich aufgewertet werden.",
@@ -48,10 +48,10 @@ const projects = [
         label:   "Bad",
       },
     ],
-    title: "Eigentumswohnung, Leipzig-Gohlis",
+    title: "Eigentumswohnung, Dresden-Löbtau",
     meta:  "62 m² · Baujahr 1978 · Kernsaniert",
     text:
-      "Diskreter Direktankauf im Rahmen einer Erbauseinandersetzung. Schnelle Abwicklung innerhalb von 3 Wochen bis zum Notartermin.",
+      "Diskreter Direktankauf im Rahmen einer Erbauseinandersetzung. Schnelle Abwicklung innerhalb von 4 Wochen bis zum Notartermin.",
   },
 ];
 
@@ -66,7 +66,7 @@ export function ReferenzenPreview() {
             </p>
             <RuneDivider className="max-w-xs" />
             <h2 className="text-4xl md:text-5xl font-nazare text-brand-anthracite mt-4">
-              Vorher — Nachher
+              Vorher / Nachher
             </h2>
           </div>
           <Button href="/referenzen" variant="ghost">
