@@ -16,9 +16,9 @@ const projects = [
     ],
     title: "3-Raumwohnung, Dresden-Striesen",
     meta:  "78 m² · Baujahr 1960 · Vollsaniert 2023",
-    text:  "Ankauf einer unsanierten Bestandswohnung. Nach umfassender Modernisierung inklusive neuer Heizungsanlage, Bäder und Bodenbelägen konnte die Immobilie deutlich aufgewertet werden.",
-    tags:  ["Vollsanierung", "Neue Heizung", "Modernisierung"],
-    time:  "3 Wochen bis Notartermin",
+    text:  "Ankauf einer unsanierten Bestandswohnung. Nach umfassender Modernisierung inklusive neuer Bäder und Bodenbelägen konnte die Immobilie deutlich aufgewertet werden.",
+    tags:  ["Vollsanierung", "Modernisierung"],
+    time:  "4 Wochen bis Notartermin",
   },
   {
     pairs: [
@@ -26,7 +26,7 @@ const projects = [
       { vorher: "/CADA%20Projekt%202/K%C3%BCche%20vorher.png",  nachher: "/CADA%20Projekt%202/K%C3%BCche%20nachher.png",  label: "Küche" },
       { vorher: "/CADA%20Projekt%202/Bad%20vorher.png",         nachher: "/CADA%20Projekt%202/Bad%20nachher.png",         label: "Bad" },
     ],
-    title: "Eigentumswohnung, Leipzig-Gohlis",
+    title: "Eigentumswohnung, Dresden-Löbtau",
     meta:  "62 m² · Baujahr 1978 · Kernsaniert 2022",
     text:  "Diskreter Direktankauf im Rahmen einer Erbauseinandersetzung. Schnelle Abwicklung innerhalb von 3 Wochen bis zum Notartermin. Vollständige Koordination mit allen Erben.",
     tags:  ["Erbfall", "Schnellabwicklung", "Kernsanierung"],
@@ -67,7 +67,7 @@ export default function ReferenzenPage() {
               <span className="text-brand-gold">Projekte</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/65 max-w-lg">
-              Einblicke in ausgewählte Ankaufsprojekte — von der Übernahme bis zur Aufwertung.
+              Einblicke in ausgewählte Ankaufsprojekte, von der Übernahme bis zur Aufwertung.
             </motion.p>
           </motion.div>
         </div>
@@ -84,9 +84,9 @@ export default function ReferenzenPage() {
             className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-brand-gold/15"
           >
             {[
-              { value: "32",        unit: "",         label: "realisierte Projekte" },
-              { value: "7",         unit: " Jahre",   label: "Markterfahrung in Sachsen" },
-              { value: "Ø 3",       unit: " Wochen",  label: "bis zum Notartermin" },
+              { value: "32+",       unit: "",         label: "realisierte Projekte" },
+              { value: "100",       unit: "%",        label: "Prozessübernahme" },
+              { value: "Ø 4",       unit: " Wochen",  label: "bis zum Notartermin" },
             ].map(({ value, unit, label }) => (
               <motion.div key={label} variants={fadeUp} className="py-8 sm:py-10 px-6 text-center">
                 <p className="text-4xl md:text-5xl font-nazare text-brand-anthracite mb-1">
@@ -152,7 +152,7 @@ export default function ReferenzenPage() {
 
       <CtaSection
         headline="Ihr nächstes Projekt?"
-        subtext="Sprechen Sie uns an — wir bewerten Ihre Immobilie kostenlos und unverbindlich."
+        subtext="Sprechen Sie uns an. Wir bewerten Ihre Immobilie kostenlos und unverbindlich."
       />
     </>
   );
