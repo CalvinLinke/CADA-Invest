@@ -9,7 +9,7 @@ const steps = [
   {
     num: "01",
     title: "Kontaktaufnahme",
-    text: "Sie nehmen Kontakt auf — per Formular, Telefon oder E-Mail. Wir melden uns innerhalb von 24 Stunden.",
+    text: "Sie nehmen Kontakt auf, per Formular, Telefon oder E-Mail. Wir melden uns innerhalb von 24 Stunden.",
   },
   {
     num: "02",
@@ -19,7 +19,7 @@ const steps = [
   {
     num: "03",
     title: "Unterlagenbeschaffung",
-    text: "Wir beschaffen alle erforderlichen Unterlagen — Grundbuchauszug, Energieausweis, Teilungserklärung. Sie müssen nichts organisieren.",
+    text: "Wir beschaffen alle erforderlichen Unterlagen: Grundbuchauszug, Energieausweis, Teilungserklärung. Sie müssen nichts organisieren.",
   },
   {
     num: "04",
@@ -77,7 +77,7 @@ export function ProcessSection() {
 
         <div className="text-center">
           <Button href="/immobilienbewertung" size="lg">
-            Jetzt kostenlos starten
+            Kostenloses Kaufangebot
           </Button>
         </div>
       </div>
