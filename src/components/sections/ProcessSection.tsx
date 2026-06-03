@@ -19,12 +19,12 @@ const steps = [
   {
     num: "03",
     title: "Unterlagenbeschaffung",
-    text: "Wir beschaffen alle erforderlichen Unterlagen: Grundbuchauszug, Energieausweis, Teilungserklärung. Sie müssen nichts organisieren.",
+    text: "Bei Bedarf beschaffen wir alle erforderlichen Unterlagen: Grundbuchauszug, Energieausweis, Teilungserklärung usw.",
   },
   {
     num: "04",
     title: "Notartermin & Übergabe",
-    text: "Der Notartermin erfolgt in der Regel innerhalb von 4 Wochen. Danach ist der Prozess abgeschlossen.",
+    text: "Der Notartermin erfolgt in der Regel innerhalb von 4 Wochen.",
   },
 ];
 
