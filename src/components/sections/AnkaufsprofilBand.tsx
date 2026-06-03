@@ -27,7 +27,7 @@ export function AnkaufsprofilBand() {
             <RuneDivider light className="max-w-[180px]" />
             <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-nazare text-white mt-5 mb-5 leading-tight">
               Unsere Ankaufskriterien.{" "}
-              <span className="text-brand-gold">Kompakt und direkt weiterleitbar.</span>
+              <span className="text-brand-gold">Alles auf einen Blick.</span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-white/55 leading-relaxed mb-8 max-w-lg">
               Alle Ankaufskriterien, Standorte und Kontaktdaten kompakt auf einer Seite. Ideal zum Weiterleiten an Eigentümer oder Netzwerkpartner.
@@ -37,7 +37,6 @@ export function AnkaufsprofilBand() {
             <motion.ul variants={staggerContainer} className="space-y-3 mb-10">
               {[
                 "32+ realisierte Projekte in Sachsen",
-                "Ankauf in 8 Schlüsselstandorten",
                 "Verbindliches Angebot in 48 Stunden",
                 "Direkte Kontaktaufnahme per QR-Code",
               ].map((item) => (
