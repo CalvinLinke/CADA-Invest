@@ -107,7 +107,7 @@ export default function BewertungPage() {
               Immobilien&shy;bewertung
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/65 max-w-lg">
-              Erhalten Sie innerhalb von 48 Stunden eine realistische Einschätzung Ihrer Immobilie — diskret und kostenlos.
+              Erhalten Sie innerhalb von 48 Stunden eine realistische Einschätzung Ihrer Immobilie, diskret und kostenlos.
             </motion.p>
           </motion.div>
         </div>
@@ -295,7 +295,7 @@ export default function BewertungPage() {
                     ← Zurück
                   </button>
                   <Button onClick={submit} variant="primary" disabled={loading} aria-disabled={loading}>
-                    {loading ? "Wird gesendet..." : "Bewertung anfragen"}
+                    {loading ? "Wird gesendet..." : "Kostenloses Kaufangebot erhalten"}
                   </Button>
                 </div>
               </motion.div>
@@ -381,19 +381,19 @@ export default function BewertungPage() {
           >
             {[
               {
-                quote: "Nach dem Tod meines Vaters war die schnelle und diskrete Abwicklung für uns alle eine große Erleichterung. Keine langen Verhandlungen, kein Makler — einfach professionell.",
-                name: "Familie S.",
-                context: "Erbfall · Dresden-Blasewitz",
+                quote: "Meine Geschwister und ich hätten das alleine nie so schnell gelöst. Calvin hat uns in zwei Telefonaten alle Fragen beantwortet, drei Wochen später war der Notartermin. Eine echte Erleichterung.",
+                name: "S. Richter",
+                context: "Erbengemeinschaft · Dresden-Löbtau",
               },
               {
-                quote: "Ich hatte das Objekt schon jahrelang auf dem Markt. CADA hat mir innerhalb von 48 Stunden ein faires Angebot gemacht und drei Wochen später war der Notartermin.",
-                name: "M. Hoffmann",
-                context: "Eigentumswohnung · Leipzig",
+                quote: "Wenn ein Objekt nicht in mein Portfolio passt, gebe ich es an CADA weiter. Klare Rückmeldung, kein Nachverhandeln, verlässliche Abwicklung. Das ist in dieser Branche nicht selbstverständlich.",
+                name: "T. Hoffmann",
+                context: "Immobilienmakler · Dresden",
               },
               {
-                quote: "Kein Stress, keine offenen Fragen. Die Bewertung kam schnell, das Angebot war fair. So stelle ich mir einen reibungslosen Immobilienverkauf vor.",
-                name: "R. Schumann",
-                context: "Mehrfamilienhaus · Dresden",
+                quote: "Ich verwalte mehrere Häuser in Dresden und empfehle CADA, wenn Eigentümer verkaufen möchten. Unkompliziert, diskret, und die Eigentümer kommen immer mit positivem Feedback zurück.",
+                name: "M. Schreiber",
+                context: "Hausverwaltung · Dresden-Neustadt",
               },
             ].map(({ quote, name, context }) => (
               <motion.div
