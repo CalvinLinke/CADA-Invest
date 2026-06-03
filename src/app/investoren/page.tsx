@@ -464,7 +464,7 @@ export default function InvestorenPage() {
                 <div>
                   <p className="font-semibold text-brand-anthracite text-sm mb-2">Argo Residential</p>
                   <p className="text-sm text-brand-anthracite/60 leading-relaxed">
-                    Argo Residential ist ein deutsches Unternehmen, das genau diesen Ansatz im größeren Maßstab betreibt: günstiger Ankauf, systematische Entwicklung, Exit an institutionelle Käufer. Das Unternehmen zeigt, dass das Modell skalierbar ist und dass der Markt für entwickelte Objekte vorhanden ist.
+                    Argo Residential ist ein deutsches Unternehmen, das genau diesen Ansatz im größeren Maßstab betreibt: günstiger Ankauf, systematische Entwicklung, Exit an institutionelle und private Käufer. Das Unternehmen zeigt, dass das Modell skalierbar ist und dass der Markt für entwickelte Objekte vorhanden ist.
                   </p>
                   <p className="text-[10px] text-brand-anthracite/30 mt-3 tracking-wide">Vergleichsreferenz: Argo Residential GmbH</p>
                 </div>
