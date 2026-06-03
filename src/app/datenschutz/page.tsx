@@ -3,7 +3,7 @@ import { RuneIcon } from "@/components/ui/RuneIcon";
 import { RuneDivider } from "@/components/ui/RuneDivider";
 
 export const metadata: Metadata = {
-  title: "Datenschutz — CADA Invest GmbH",
+  title: "Datenschutz | CADA Invest GmbH",
   description: "Datenschutzerklärung der CADA Invest GmbH gemäß DSGVO.",
 };
 
@@ -74,7 +74,7 @@ export default function DatenschutzPage() {
                 Wenn Sie uns per Formular oder E-Mail kontaktieren, werden Ihre angegebenen Daten (Name, E-Mail-Adresse, ggf. Telefon, Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
               </p>
               <p>
-                Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung bzw. vorvertragliche Maßnahmen) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung Ihrer Anfrage). Die Daten werden gelöscht, sobald sie für die Erreichung des Zwecks ihrer Erhebung nicht mehr erforderlich sind — in der Regel nach abschließender Bearbeitung Ihrer Anfrage. Sofern gesetzliche Aufbewahrungspflichten bestehen (z. B. §§ 238, 257 HGB, § 147 AO), werden die Daten für die gesetzlich vorgeschriebene Dauer aufbewahrt.
+                Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung bzw. vorvertragliche Maßnahmen) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung Ihrer Anfrage). Die Daten werden gelöscht, sobald sie für die Erreichung des Zwecks ihrer Erhebung nicht mehr erforderlich sind, in der Regel nach abschließender Bearbeitung Ihrer Anfrage. Sofern gesetzliche Aufbewahrungspflichten bestehen (z. B. §§ 238, 257 HGB, § 147 AO), werden die Daten für die gesetzlich vorgeschriebene Dauer aufbewahrt.
               </p>
               <p>
                 Für den Versand von E-Mail-Benachrichtigungen nutzen wir den Dienst Resend (Resend Inc., 2261 Market St #5039, San Francisco, CA 94114, USA). Mit Resend besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO. Resend verarbeitet die übermittelten Daten ausschließlich zur Weiterleitung der Nachricht an uns und nicht für eigene Zwecke. Die Datenübertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO).
