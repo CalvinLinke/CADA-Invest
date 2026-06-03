@@ -14,7 +14,7 @@ const posts = [
     slug: "immobilie-verkaufen-ohne-makler",
     date: "15. März 2024",
     category: "Verkaufsprozess",
-    title: "Wohnung verkaufen ohne Makler — Ablauf, Vorteile und Risiken",
+    title: "Wohnung verkaufen ohne Makler: Ablauf, Vorteile und Risiken",
     excerpt: "Der Direktverkauf ohne Makler bietet echte Vorteile, setzt aber Marktwissen voraus. Wir erklären, worauf es ankommt.",
     readTime: "5 Min.",
   },
@@ -30,7 +30,7 @@ const posts = [
     slug: "erbfall-immobilien-richtig-handeln",
     date: "18. Januar 2024",
     category: "Erbfall",
-    title: "Erbfall: Immobilie geerbt — was jetzt zu tun ist",
+    title: "Erbfall: Immobilie geerbt, was jetzt zu tun ist",
     excerpt: "Ein Erbfall geht oft mit emotionalem und bürokratischem Aufwand einher. Wir erklären die wichtigsten Schritte.",
     readTime: "6 Min.",
   },
@@ -39,7 +39,7 @@ const posts = [
     date: "5. Januar 2024",
     category: "Bewertung",
     title: "Was bestimmt den Wert Ihrer Eigentumswohnung?",
-    excerpt: "Lage, Zustand, Baujahr, Ausstattung — ein Überblick über die wichtigsten Preisfaktoren beim Wohnungsverkauf.",
+    excerpt: "Lage, Zustand, Baujahr, Ausstattung: ein Überblick über die wichtigsten Preisfaktoren beim Wohnungsverkauf.",
     readTime: "4 Min.",
   },
 ];
@@ -64,7 +64,7 @@ export default function BlogPage() {
             <span className="text-brand-gold">Expertenwissen</span>
           </h1>
           <p className="text-lg text-white/65 max-w-lg">
-            Fachartikel und Marktanalysen zum Immobilienverkauf in Sachsen — für Eigentümer, die fundierte Entscheidungen treffen wollen.
+            Fachartikel und Marktanalysen zum Immobilienverkauf in Sachsen, für Eigentümer, die fundierte Entscheidungen treffen wollen.
           </p>
         </div>
       </section>
