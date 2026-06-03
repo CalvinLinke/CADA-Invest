@@ -89,7 +89,7 @@ export function UspSection() {
             Warum CADA Invest?
           </h2>
           <p className="mt-4 text-lg text-brand-anthracite/60 max-w-xl mx-auto">
-            Klar strukturiert, effizient und diskret. Für Eigentümer, die Sicherheit und Geschwindigkeit schätzen.
+            Klar strukturiert, effizient und diskret. Für Eigentümer, die ihren Verkauf einfach und verlässlich abwickeln wollen.
           </p>
         </div>
 
@@ -133,19 +133,13 @@ export function UspSection() {
               <p className="text-sm text-white/60 font-semibold tracking-[0.1em] uppercase mb-3">
                 Kostenlos & unverbindlich
               </p>
-              <h3 className="text-2xl font-nazare text-white leading-snug">
-                Kostenloses Kaufangebot erhalten
-              </h3>
+              <a
+                href="/immobilienbewertung"
+                className="text-2xl font-nazare text-brand-gold leading-snug hover:opacity-80 transition-opacity duration-150"
+              >
+                Kostenloses Kaufangebot erhalten <svg className="inline-block align-middle" width="28" height="28" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </a>
             </div>
-            <a
-              href="/immobilienbewertung"
-              className="mt-6 inline-flex items-center gap-2 text-brand-gold font-semibold text-sm hover:gap-3 transition-all duration-150"
-            >
-              Kaufangebot einholen
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
           </motion.div>
         </motion.div>
       </div>
