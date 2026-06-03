@@ -9,7 +9,7 @@ import { ReferenzenPreview }   from "@/components/sections/ReferenzenPreview";
 import { AnkaufsprofilBand }   from "@/components/sections/AnkaufsprofilBand";
 
 export const metadata: Metadata = {
-  title: "CADA Invest GmbH — Immobilienankauf Sachsen",
+  title: "CADA Invest GmbH | Immobilienankauf Sachsen",
   description:
     "Professioneller Direktankauf von Wohnimmobilien in Sachsen. Angebot innerhalb von 48 Stunden, Notartermin in unter 4 Wochen.",
 };
