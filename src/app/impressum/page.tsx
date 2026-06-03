@@ -3,7 +3,7 @@ import { RuneIcon } from "@/components/ui/RuneIcon";
 import { RuneDivider } from "@/components/ui/RuneDivider";
 
 export const metadata: Metadata = {
-  title: "Impressum — CADA Invest GmbH",
+  title: "Impressum | CADA Invest GmbH",
   description: "Impressum der CADA Invest GmbH gemäß § 5 TMG.",
 };
 
@@ -48,7 +48,7 @@ export default function ImpressumPage() {
                 Vertreten durch
               </p>
               <p className="text-brand-anthracite/70">
-                Geschäftsführer: Calvin Linke
+                Geschäftsführer: Calvin Linke, Dave Blümel
               </p>
             </div>
 
