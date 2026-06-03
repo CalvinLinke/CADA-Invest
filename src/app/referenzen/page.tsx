@@ -28,9 +28,9 @@ const projects = [
     ],
     title: "Eigentumswohnung, Dresden-Löbtau",
     meta:  "62 m² · Baujahr 1978 · Kernsaniert 2022",
-    text:  "Diskreter Direktankauf im Rahmen einer Erbauseinandersetzung. Schnelle Abwicklung innerhalb von 3 Wochen bis zum Notartermin. Vollständige Koordination mit allen Erben.",
+    text:  "Diskreter Direktankauf im Rahmen einer Erbauseinandersetzung. Schnelle Abwicklung innerhalb von 5 Wochen bis zum Notartermin. Vollständige Koordination mit allen Erben.",
     tags:  ["Erbfall", "Schnellabwicklung", "Kernsanierung"],
-    time:  "21 Tage bis Notartermin",
+    time:  "Über Maklernetzwerk",
   },
   {
     pairs: [
