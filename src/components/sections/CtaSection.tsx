@@ -11,7 +11,7 @@ interface CtaSectionProps {
 
 export function CtaSection({
   headline = "Bereit, Ihre Immobilie zu verkaufen?",
-  subtext  = "Erhalten Sie innerhalb von 48 Stunden eine realistische Einschätzung Ihrer Immobilie — kostenlos, unverbindlich und diskret.",
+  subtext  = "Erhalten Sie innerhalb von 48 Stunden eine realistische Einschätzung Ihrer Immobilie, kostenlos, unverbindlich und diskret.",
 }: CtaSectionProps) {
   return (
     <section className="py-24 md:py-32 bg-brand-anthracite relative overflow-hidden">
@@ -30,7 +30,7 @@ export function CtaSection({
             variants={fadeUp}
             className="text-[11px] font-semibold tracking-[0.18em] uppercase text-brand-gold/70 mb-6"
           >
-            Jetzt handeln
+            Ihr nächster Schritt
           </motion.p>
 
           <motion.h2
@@ -49,7 +49,7 @@ export function CtaSection({
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/immobilienbewertung" variant="primary" size="lg">
-              Kostenlose Bewertung anfragen
+              Kostenloses Kaufangebot erhalten
             </Button>
             <Button href="/ankauf" variant="secondary" size="lg" className="border-white/30 text-white/80 hover:border-white before:bg-white/10">
               Mehr zum Ablauf
