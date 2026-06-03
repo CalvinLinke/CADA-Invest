@@ -15,7 +15,7 @@ const privateItems = [
 ];
 
 const proItems = [
-  "Makler mit Objekten außerhalb des eigenen Fokus",
+  "Makler",
   "Steuerberater & Anwälte mit Mandantensituationen",
   "Hausverwalter mit verkaufswilligen Eigentümern",
   "Banken & Finanzberater",
