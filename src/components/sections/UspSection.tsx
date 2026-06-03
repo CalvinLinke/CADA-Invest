@@ -28,7 +28,7 @@ const usps = [
         <path d="M12 7v5l3.5 2" />
       </UspIcon>
     ),
-    title: "Angebot in 48 Stunden",
+    title: "Erhalten Sie Ihr Kaufangebot",
     text: "Sie erhalten innerhalb von 48 Stunden nach Ihrer Anfrage ein konkretes, unverbindliches Angebot.",
   },
   {
@@ -40,7 +40,7 @@ const usps = [
       </UspIcon>
     ),
     title: "Notartermin in 4 Wochen",
-    text: "Von der Kontaktaufnahme bis zum Notartermin vergehen in der Regel unter 4 Wochen.",
+    text: "Von der Kontaktaufnahme bis zum Notartermin vergehen in der Regel weniger als 4 Wochen.",
   },
   {
     icon: (
@@ -50,7 +50,7 @@ const usps = [
       </UspIcon>
     ),
     title: "Vollständige Prozessübernahme",
-    text: "Wir übernehmen den gesamten Verkaufsprozess für Sie — von der Bewertung bis zur Schlüsselübergabe.",
+    text: "Wir übernehmen den gesamten Prozess der Unterlagenbeschaffung für Sie vollständig, von Grundbuchauszug bis Energieausweis.",
   },
   {
     icon: (
@@ -61,7 +61,7 @@ const usps = [
       </UspIcon>
     ),
     title: "Diskrete Abwicklung",
-    text: "Ihre Daten und der Verkaufsvorgang werden vertraulich und diskret behandelt.",
+    text: "Der gesamte Ankaufsvorgang wird diskret und vertrauensvoll behandelt.",
   },
   {
     icon: (
@@ -89,7 +89,7 @@ export function UspSection() {
             Warum CADA Invest?
           </h2>
           <p className="mt-4 text-lg text-brand-anthracite/60 max-w-xl mx-auto">
-            Klar strukturiert, effizient und diskret — für Eigentümer, die Sicherheit und Geschwindigkeit schätzen.
+            Klar strukturiert, effizient und diskret. Für Eigentümer, die Sicherheit und Geschwindigkeit schätzen.
           </p>
         </div>
 
@@ -134,14 +134,14 @@ export function UspSection() {
                 Kostenlos & unverbindlich
               </p>
               <h3 className="text-2xl font-nazare text-white leading-snug">
-                Jetzt Immobilie bewerten lassen
+                Kostenloses Kaufangebot erhalten
               </h3>
             </div>
             <a
               href="/immobilienbewertung"
               className="mt-6 inline-flex items-center gap-2 text-brand-gold font-semibold text-sm hover:gap-3 transition-all duration-150"
             >
-              Zur Bewertung
+              Kaufangebot einholen
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
