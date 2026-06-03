@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "CADA Invest GmbH — Immobilienankauf Sachsen",
+    default: "CADA Invest GmbH | Immobilienankauf Sachsen",
     template: "%s | CADA Invest GmbH",
   },
   description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "CADA Invest GmbH",
-    title: "CADA Invest GmbH — Immobilienankauf Sachsen",
+    title: "CADA Invest GmbH | Immobilienankauf Sachsen",
     description:
       "Professioneller Direktankauf von Wohnimmobilien in Sachsen. Angebot in 48 Stunden.",
   },
