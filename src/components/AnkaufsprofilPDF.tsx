@@ -175,14 +175,15 @@ const s = StyleSheet.create({
   stripLabel: { fontFamily: "Inter", fontWeight: 400, fontSize: 7.5, color: AN, textAlign: "center" },
 
   // contact
-  contact:      { backgroundColor: G_, borderRadius: 8, padding: 20, flexDirection: "row", alignItems: "center" },
-  contactLeft:  { flex: 1 },
-  contactLabel: { fontFamily: "Inter", fontWeight: 600, fontSize: 6.5, color: GO, letterSpacing: 2.5, marginBottom: 10 },
-  contactName:  { fontFamily: "Playfair", fontWeight: 400, fontSize: 17, color: WH, marginBottom: 2 },
-  contactRole:  { fontFamily: "Inter", fontWeight: 400, fontSize: 9, color: GO, marginBottom: 10 },
-  contactLine:  { fontFamily: "Inter", fontWeight: 400, fontSize: 9.5, color: WH, marginBottom: 3 },
-  qr:           { width: 82, height: 82, backgroundColor: WH, borderRadius: 6, padding: 4 },
-  qrLabel:      { fontFamily: "Inter", fontWeight: 400, fontSize: 6, color: WH, textAlign: "center", marginTop: 4, letterSpacing: 0.5 },
+  contact:         { backgroundColor: G_, borderRadius: 8, padding: 20, flexDirection: "row", alignItems: "flex-start" },
+  contactCard:     { flex: 1, alignItems: "center" },
+  contactDivider:  { width: 0.75, backgroundColor: WH, opacity: 0.2, marginHorizontal: 12, alignSelf: "stretch" },
+  contactLabel:    { fontFamily: "Inter", fontWeight: 600, fontSize: 6.5, color: GO, letterSpacing: 2.5, marginBottom: 10 },
+  contactName:     { fontFamily: "Playfair", fontWeight: 400, fontSize: 16, color: WH, marginBottom: 2 },
+  contactRole:     { fontFamily: "Inter", fontWeight: 400, fontSize: 9, color: GO, marginBottom: 10 },
+  contactLine:     { fontFamily: "Inter", fontWeight: 400, fontSize: 9.5, color: WH, marginBottom: 3 },
+  qr:              { width: 72, height: 72, backgroundColor: WH, borderRadius: 6, padding: 4 },
+  qrLabel:         { fontFamily: "Inter", fontWeight: 400, fontSize: 6, color: WH, textAlign: "center", marginTop: 4, letterSpacing: 0.5 },
 
   contentFooterRule: {
     position: "absolute", bottom: 28, left: 56, right: 48,
@@ -242,7 +243,7 @@ function CoverPage() {
   );
 }
 
-function ContentPage({ qrCode }: { qrCode: string }) {
+function ContentPage({ qrCodeCalvin, qrCodeDave }: { qrCodeCalvin: string; qrCodeDave: string }) {
   return (
     <Page size="A4" style={s.content}>
       <View style={s.leftBar} />
@@ -269,7 +270,7 @@ function ContentPage({ qrCode }: { qrCode: string }) {
             CADA Invest GmbH ist ein auf den Direktankauf spezialisiertes Unternehmen für
             Wohnimmobilien im Raum Sachsen. Mit über 32 realisierten Projekten und 7 Jahren
             Markterfahrung bieten wir eine diskrete, schnelle und transparente Alternative
-            zum klassischen Immobilienverkauf — vom ersten Kontakt bis zur Schlüsselübergabe.
+            zum klassischen Immobilienverkauf, vom ersten Kontakt bis zur Schlüsselübergabe.
           </Text>
         </View>
 
@@ -315,7 +316,7 @@ function ContentPage({ qrCode }: { qrCode: string }) {
           <View style={s.offBadge}>
             <Text style={s.offBadgeText}>OFF-MARKET</Text>
           </View>
-          <Text style={s.offText}>Diskrete Transaktionen bevorzugt — kein Inserat erforderlich.</Text>
+          <Text style={s.offText}>Diskrete Transaktionen bevorzugt, kein Inserat erforderlich.</Text>
         </View>
 
         {/* Promise strip */}
@@ -338,16 +339,28 @@ function ContentPage({ qrCode }: { qrCode: string }) {
 
         {/* Contact */}
         <View style={s.contact}>
-          <View style={s.contactLeft}>
-            <Text style={s.contactLabel}>IHR ANSPRECHPARTNER</Text>
+          <View style={s.contactCard}>
+            <Text style={s.contactLabel}>ANSPRECHPARTNER</Text>
             <Text style={s.contactName}>Calvin Linke</Text>
             <Text style={s.contactRole}>Geschäftsführer</Text>
             <Text style={s.contactLine}>+49 162 1766880</Text>
-            <Text style={s.contactLine}>Info@cada-invest.de</Text>
+            <Text style={s.contactLine}>info@cada-invest.de</Text>
+            <View style={{ alignItems: "center", marginTop: 10 }}>
+              <Image src={qrCodeCalvin} style={s.qr} />
+              <Text style={s.qrLabel}>Kontakt speichern</Text>
+            </View>
           </View>
-          <View style={{ alignItems: "center" }}>
-            <Image src={qrCode} style={s.qr} />
-            <Text style={s.qrLabel}>Kontakt speichern</Text>
+          <View style={s.contactDivider} />
+          <View style={s.contactCard}>
+            <Text style={s.contactLabel}>ANSPRECHPARTNER</Text>
+            <Text style={s.contactName}>Dave Blümel</Text>
+            <Text style={s.contactRole}>Geschäftsführer</Text>
+            <Text style={s.contactLine}>+49 174 4853652</Text>
+            <Text style={s.contactLine}>info@cada-invest.de</Text>
+            <View style={{ alignItems: "center", marginTop: 10 }}>
+              <Image src={qrCodeDave} style={s.qr} />
+              <Text style={s.qrLabel}>Kontakt speichern</Text>
+            </View>
           </View>
         </View>
 
@@ -363,7 +376,7 @@ function ContentPage({ qrCode }: { qrCode: string }) {
 }
 
 // ── Export ────────────────────────────────────────────────────────────────────
-export function AnkaufsprofilPDF({ qrCode }: { qrCode: string }) {
+export function AnkaufsprofilPDF({ qrCodeCalvin, qrCodeDave }: { qrCodeCalvin: string; qrCodeDave: string }) {
   return (
     <Document
       title="CADA Invest – Ankaufsprofil"
@@ -371,7 +384,7 @@ export function AnkaufsprofilPDF({ qrCode }: { qrCode: string }) {
       subject="Direktankauf von Wohnimmobilien in Sachsen"
     >
       <CoverPage />
-      <ContentPage qrCode={qrCode} />
+      <ContentPage qrCodeCalvin={qrCodeCalvin} qrCodeDave={qrCodeDave} />
     </Document>
   );
 }
