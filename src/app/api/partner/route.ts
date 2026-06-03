@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, telefon, objekt, nachricht } = await req.json();
+    const { name, email, telefon, immobilienart, adresse, groesse, zustand, anmerkungen } = await req.json();
 
     if (!name || !email) {
       return NextResponse.json({ error: "Pflichtfelder fehlen" }, { status: 400 });
@@ -35,13 +35,12 @@ export async function POST(req: NextRequest) {
               <tr><td style="padding:8px 0;color:#666;width:120px">Name</td><td style="padding:8px 0;color:#2a2a2a;font-weight:600">${name}</td></tr>
               <tr><td style="padding:8px 0;color:#666">E-Mail</td><td style="padding:8px 0"><a href="mailto:${email}" style="color:#16542c">${email}</a></td></tr>
               ${telefon ? `<tr><td style="padding:8px 0;color:#666">Telefon</td><td style="padding:8px 0;color:#2a2a2a">${telefon}</td></tr>` : ""}
-              ${objekt ? `<tr><td style="padding:8px 0;color:#666">Objekt</td><td style="padding:8px 0;color:#2a2a2a">${objekt}</td></tr>` : ""}
+              ${immobilienart ? `<tr><td style="padding:8px 0;color:#666">Immobilienart</td><td style="padding:8px 0;color:#2a2a2a">${immobilienart}</td></tr>` : ""}
+              ${adresse ? `<tr><td style="padding:8px 0;color:#666">Adresse</td><td style="padding:8px 0;color:#2a2a2a">${adresse}</td></tr>` : ""}
+              ${groesse ? `<tr><td style="padding:8px 0;color:#666">Größe</td><td style="padding:8px 0;color:#2a2a2a">${groesse} m²</td></tr>` : ""}
+              ${zustand ? `<tr><td style="padding:8px 0;color:#666">Zustand</td><td style="padding:8px 0;color:#2a2a2a">${zustand}</td></tr>` : ""}
+              ${anmerkungen ? `<tr><td style="padding:8px 0;color:#666;vertical-align:top">Anmerkungen</td><td style="padding:8px 0;color:#2a2a2a;white-space:pre-wrap">${anmerkungen}</td></tr>` : ""}
             </table>
-            ${nachricht ? `
-            <div style="margin-top:16px;padding-top:16px;border-top:1px solid #e5e7eb">
-              <p style="color:#666;font-size:13px;margin:0 0 8px">Weitere Informationen:</p>
-              <p style="color:#2a2a2a;white-space:pre-wrap;margin:0">${nachricht}</p>
-            </div>` : ""}
           </div>
         </div>
       `,
