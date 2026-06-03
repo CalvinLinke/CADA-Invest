@@ -6,25 +6,38 @@ import { AnkaufsprofilPDF } from "@/components/AnkaufsprofilPDF";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const vcard = [
+  const qrOpts = { width: 200, margin: 1, color: { dark: "#16542c", light: "#ffffff" } };
+
+  const vcardCalvin = [
     "BEGIN:VCARD",
     "VERSION:3.0",
     "FN:Calvin Linke",
     "N:Linke;Calvin;;;",
     "ORG:CADA Invest GmbH",
     "TITLE:Geschäftsführer",
-    "TEL;TYPE=CELL:+49 1621766880",
-    "EMAIL:Info@cada-invest.de",
+    "TEL;TYPE=CELL:+49 162 1766880",
+    "EMAIL:info@cada-invest.de",
     "END:VCARD",
   ].join("\n");
 
-  const qrDataUrl = await QRCode.toDataURL(vcard, {
-    width: 200,
-    margin: 1,
-    color: { dark: "#16542c", light: "#ffffff" },
-  });
+  const vcardDave = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "FN:Dave Blümel",
+    "N:Blümel;Dave;;;",
+    "ORG:CADA Invest GmbH",
+    "TITLE:Geschäftsführer",
+    "TEL;TYPE=CELL:+49 174 4853652",
+    "EMAIL:info@cada-invest.de",
+    "END:VCARD",
+  ].join("\n");
 
-  const buffer = await renderToBuffer(<AnkaufsprofilPDF qrCode={qrDataUrl} />);
+  const [qrCodeCalvin, qrCodeDave] = await Promise.all([
+    QRCode.toDataURL(vcardCalvin, qrOpts),
+    QRCode.toDataURL(vcardDave, qrOpts),
+  ]);
+
+  const buffer = await renderToBuffer(<AnkaufsprofilPDF qrCodeCalvin={qrCodeCalvin} qrCodeDave={qrCodeDave} />);
 
   return new Response(buffer as unknown as BodyInit, {
     headers: {
