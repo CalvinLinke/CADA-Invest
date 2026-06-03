@@ -29,6 +29,7 @@ export function Navigation() {
   useEffect(() => { setOpen(false); }, [pathname]);
 
   const transparent = !scrolled;
+  const isInvestoren = pathname === "/investoren";
 
   return (
     <>
@@ -57,47 +58,60 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {links.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={cn(
-                  "text-[14px] font-medium transition-colors duration-150 relative group",
-                  transparent ? "text-white/90 hover:text-white" : "text-brand-anthracite hover:text-brand-green"
-                )}
-              >
-                {l.label}
-                <span
+          {isInvestoren ? (
+            <span className={cn(
+              "text-[15px] font-semibold tracking-[0.06em] uppercase transition-colors duration-300",
+              transparent ? "text-white/80" : "text-brand-anthracite/70"
+            )}>
+              Investoren Pitch
+            </span>
+          ) : (
+            <nav className="hidden lg:flex items-center gap-8">
+              {links.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
                   className={cn(
-                    "absolute -bottom-0.5 left-0 right-0 h-0.5 origin-left transition-transform duration-200",
-                    pathname === l.href ? "scale-x-100 bg-brand-gold" : "scale-x-0 bg-brand-gold group-hover:scale-x-100"
+                    "text-[14px] font-medium transition-colors duration-150 relative group",
+                    transparent ? "text-white/90 hover:text-white" : "text-brand-anthracite hover:text-brand-green"
                   )}
-                />
-              </Link>
-            ))}
-          </nav>
+                >
+                  {l.label}
+                  <span
+                    className={cn(
+                      "absolute -bottom-0.5 left-0 right-0 h-0.5 origin-left transition-transform duration-200",
+                      pathname === l.href ? "scale-x-100 bg-brand-gold" : "scale-x-0 bg-brand-gold group-hover:scale-x-100"
+                    )}
+                  />
+                </Link>
+              ))}
+            </nav>
+          )}
 
           {/* CTA */}
-          <div className="hidden lg:block">
-            <Button href="/immobilienbewertung" variant="primary" size="sm">
-              Immobilie anbieten
-            </Button>
-          </div>
+          {!isInvestoren && (
+            <div className="hidden lg:block">
+              <Button href="/immobilienbewertung" variant="primary" size="sm">
+                Immobilie anbieten
+              </Button>
+            </div>
+          )}
 
           {/* Hamburger */}
-          <button
-            onClick={() => setOpen(!open)}
-            className={cn(
-              "lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg",
-              transparent ? "text-white" : "text-brand-anthracite"
-            )}
-            aria-label="Menü öffnen"
-          >
-            <span className={cn("w-6 h-0.5 bg-current transition-all duration-200", open && "translate-y-2 rotate-45")} />
-            <span className={cn("w-6 h-0.5 bg-current transition-all duration-200", open && "opacity-0")} />
-            <span className={cn("w-6 h-0.5 bg-current transition-all duration-200", open && "-translate-y-2 -rotate-45")} />
-          </button>
+          {!isInvestoren && (
+            <button
+              onClick={() => setOpen(!open)}
+              className={cn(
+                "lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg",
+                transparent ? "text-white" : "text-brand-anthracite"
+              )}
+              aria-label="Menü öffnen"
+            >
+              <span className={cn("w-6 h-0.5 bg-current transition-all duration-200", open && "translate-y-2 rotate-45")} />
+              <span className={cn("w-6 h-0.5 bg-current transition-all duration-200", open && "opacity-0")} />
+              <span className={cn("w-6 h-0.5 bg-current transition-all duration-200", open && "-translate-y-2 -rotate-45")} />
+            </button>
+          )}
         </div>
       </header>
 
