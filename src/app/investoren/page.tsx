@@ -385,7 +385,7 @@ export default function InvestorenPage() {
               <span className="text-brand-gold">Erfolge realisieren.</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/60 max-w-xl leading-relaxed">
-              Der Dresdner Immobilienmarkt bietet gerade ein Fenster, das sich mit sinkenden Zinsen wieder schließt. Wir kaufen günstig, entwickeln konsequent und kennen den Exit. Fehlt noch: das richtige Kapital.
+              Der Dresdner Immobilienmarkt bietet gerade ein Fenster, das sich mit sinkenden Zinsen wieder schließt. Wir kaufen günstig, entwickeln konsequent und kennen den Exit.
             </motion.p>
           </motion.div>
         </div>
