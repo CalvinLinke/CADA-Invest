@@ -58,14 +58,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Nav */}
-          {isInvestoren ? (
-            <span className={cn(
-              "text-[15px] font-semibold tracking-[0.06em] uppercase transition-colors duration-300",
-              transparent ? "text-white/80" : "text-brand-anthracite/70"
-            )}>
-              Investoren Pitch
-            </span>
-          ) : (
+          {isInvestoren ? null : (
             <nav className="hidden lg:flex items-center gap-8">
               {links.map((l) => (
                 <Link
