@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <rect width="100" height="100" fill="#000000"/>
+  <g fill="#aa734a">
+    <clipPath id="rune-clip">
+      <circle cx="50" cy="50" r="47"/>
+    </clipPath>
+    <g clip-path="url(#rune-clip)">
+      <rect x="3" y="38" width="94" height="24" rx="12"/>
+      <rect x="38" y="3" width="24" height="94" rx="12"/>
+      <rect x="3" y="38" width="94" height="24" rx="12" transform="rotate(45 50 50)"/>
+      <rect x="3" y="38" width="94" height="24" rx="12" transform="rotate(-45 50 50)"/>
+    </g>
+    <circle cx="50" cy="50" r="11" fill="none" stroke="#aa734a" stroke-width="4.5" opacity="0.35"/>
+  </g>
+</svg>
