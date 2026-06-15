@@ -17,6 +17,17 @@
   box-sizing: border-box;
 }
 
+/* Custom CI cursor */
+body {
+  cursor: url('/cursor-default.svg') 0 0, default;
+}
+a, button, [role="button"], label[for], select, .cursor-pointer, [style*="cursor: pointer"] {
+  cursor: url('/cursor-pointer.svg') 8 1, pointer;
+}
+input, textarea {
+  cursor: text;
+}
+
 html {
   scroll-behavior: smooth;
 }
