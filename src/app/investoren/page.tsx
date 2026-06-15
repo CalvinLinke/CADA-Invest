@@ -385,7 +385,7 @@ export default function InvestorenPage() {
               <span className="text-brand-gold">Erfolge realisieren.</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-lg text-white/60 max-w-xl leading-relaxed">
-              Der Dresdner Immobilienmarkt bietet gerade ein Fenster, das sich mit sinkenden Zinsen wieder schließt. Wir kaufen günstig, entwickeln konsequent und kennen den Exit.
+              Der Dresdner Immobilienmarkt bietet gerade ein Fenster. Wir kaufen günstig, entwickeln konsequent und kennen den Exit.
             </motion.p>
           </motion.div>
         </div>
@@ -398,14 +398,14 @@ export default function InvestorenPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce}>
             <motion.p variants={fadeUp} className="text-[11px] font-semibold tracking-[0.15em] uppercase text-brand-gold mb-2">
-              Das Geschäftsmodell
+              Das Konzept
             </motion.p>
             <RuneDivider className="max-w-xs mb-6" />
             <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-nazare text-brand-anthracite mb-5">
               Drei Schritte. Maximaler Hebel.
             </motion.h2>
             <motion.p variants={fadeUp} className="text-brand-anthracite/60 max-w-2xl leading-relaxed">
-              Wir erwerben Wohn- und Geschäftshäuser über unser Netzwerk zu Konditionen, die am freien Markt nicht verfügbar wären. Durch eine systematische Entwicklung heben wir verborgene Potenziale und realisieren den geschaffenen Mehrwert. Das Modell ist einfach. Unsere Stärke liegt in der Umsetzung.
+              Wir erwerben Wohn- und Geschäftshäuser über unser Netzwerk zu Konditionen, die am freien Markt nicht verfügbar sind. Wir identifizieren ungenutzte Potenziale und realisieren daraus echten Mehrwert. Das Modell ist einfach. Unsere Stärke liegt in der Umsetzung.
             </motion.p>
           </motion.div>
 
