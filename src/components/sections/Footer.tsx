@@ -15,6 +15,7 @@ const nav = [
 const legal = [
   { label: "Impressum",            href: "/impressum" },
   { label: "Datenschutz",          href: "/datenschutz" },
+  { label: "Sitemap",              href: "/sitemap" },
   { label: "FAQ",                  href: "/ankauf#faq" },
 ];
 
