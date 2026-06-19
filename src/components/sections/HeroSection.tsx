@@ -14,6 +14,8 @@ export function HeroSection() {
         muted
         loop
         playsInline
+        aria-hidden="true"
+        tabIndex={-1}
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/Hero6.mp4" type="video/mp4" />
