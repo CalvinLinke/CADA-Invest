@@ -3,8 +3,15 @@ import { RuneIcon } from "@/components/ui/RuneIcon";
 import { RuneDivider } from "@/components/ui/RuneDivider";
 
 export const metadata: Metadata = {
-  title: "Impressum | CADA Invest GmbH",
+  title: "Impressum",
   description: "Impressum der CADA Invest GmbH gemäß § 5 TMG.",
+  alternates: { canonical: "/impressum" },
+  openGraph: {
+    title: "Impressum | CADA Invest GmbH",
+    description: "Impressum der CADA Invest GmbH gemäß § 5 TMG.",
+    url: "/impressum",
+    type: "website",
+  },
 };
 
 export default function ImpressumPage() {
