@@ -12,6 +12,14 @@ export const metadata: Metadata = {
   title: "CADA Invest GmbH | Immobilienankauf Sachsen",
   description:
     "Professioneller Direktankauf von Wohnimmobilien in Sachsen. Angebot innerhalb von 48 Stunden, Notartermin in unter 4 Wochen.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "CADA Invest GmbH | Immobilienankauf Sachsen",
+    description:
+      "Professioneller Direktankauf von Wohnimmobilien in Sachsen. Angebot innerhalb von 48 Stunden, Notartermin in unter 4 Wochen.",
+    url: "/",
+    type: "website",
+  },
 };
 
 export default function HomePage() {
