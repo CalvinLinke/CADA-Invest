@@ -3,8 +3,15 @@ import { RuneIcon } from "@/components/ui/RuneIcon";
 import { RuneDivider } from "@/components/ui/RuneDivider";
 
 export const metadata: Metadata = {
-  title: "Datenschutz | CADA Invest GmbH",
+  title: "Datenschutz",
   description: "Datenschutzerklärung der CADA Invest GmbH gemäß DSGVO.",
+  alternates: { canonical: "/datenschutz" },
+  openGraph: {
+    title: "Datenschutz | CADA Invest GmbH",
+    description: "Datenschutzerklärung der CADA Invest GmbH gemäß DSGVO.",
+    url: "/datenschutz",
+    type: "website",
+  },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
