@@ -279,6 +279,7 @@ export default function AnkaufPage() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
                   className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
                 >
                   <span className="font-medium text-brand-anthracite">{faq.q}</span>
