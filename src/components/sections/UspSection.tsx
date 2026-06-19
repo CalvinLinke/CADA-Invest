@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { RuneIcon } from "@/components/ui/RuneIcon";
 import { RuneDivider } from "@/components/ui/RuneDivider";
@@ -122,8 +123,7 @@ export function UspSection() {
           {/* CTA Card */}
           <motion.div
             variants={fadeUp}
-            className="bg-brand-green rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden cursor-pointer group"
-            onClick={() => { window.location.href = "/immobilienbewertung"; }}
+            className="bg-brand-green rounded-2xl p-8 flex flex-col justify-between relative overflow-hidden group"
           >
             <RuneIcon
               size={140}
@@ -133,12 +133,12 @@ export function UspSection() {
               <p className="text-sm text-white/60 font-semibold tracking-[0.1em] uppercase mb-3">
                 Kostenlos & unverbindlich
               </p>
-              <a
+              <Link
                 href="/immobilienbewertung"
                 className="text-2xl font-nazare text-brand-gold leading-snug hover:opacity-80 transition-opacity duration-150"
               >
                 Kostenloses Kaufangebot erhalten <svg className="inline-block align-middle" width="28" height="28" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </motion.div>
