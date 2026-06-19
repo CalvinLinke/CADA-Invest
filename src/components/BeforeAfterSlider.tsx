@@ -45,7 +45,7 @@ export function BeforeAfterSlider({ pairs }: { pairs: Pair[] }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={pair.nachher}
-          alt="Nachher"
+          alt={`${pair.label ?? "Ankaufsprojekt"} – nach der Aufwertung durch CADA Invest`}
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
         />
@@ -54,7 +54,7 @@ export function BeforeAfterSlider({ pairs }: { pairs: Pair[] }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={pair.vorher}
-          alt="Vorher"
+          alt={`${pair.label ?? "Ankaufsprojekt"} – vor der Aufwertung (Ausgangszustand)`}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
           draggable={false}
