@@ -6,6 +6,7 @@ import { RuneIcon } from "@/components/ui/RuneIcon";
 import { RuneDivider } from "@/components/ui/RuneDivider";
 import { Badge } from "@/components/ui/Badge";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/animations";
+import { submitContact } from "@/lib/submitContact";
 
 type Step = 1 | 2 | 3;
 
@@ -46,12 +47,24 @@ export default function BewertungPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/bewertung", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+      await submitContact({
+        subject: `Neue Bewertungsanfrage: ${form.strasse}, ${form.plz} ${form.ort}`,
+        replyTo: form.email,
+        fields: {
+          Formular: "Immobilienbewertung (cada-invest.de/immobilienbewertung)",
+          Adresse: `${form.strasse}, ${form.plz} ${form.ort}`,
+          Art: form.typ,
+          "Wohnfläche (m²)": form.groesse,
+          Zimmer: form.zimmer,
+          Baujahr: form.baujahr,
+          Zustand: form.zustand,
+          Infos: form.info,
+          Name: form.name,
+          "E-Mail": form.email,
+          Telefon: form.telefon,
+          Kontaktweg: form.kontaktweg,
+        },
       });
-      if (!res.ok) throw new Error("Fehler beim Senden");
       setSent(true);
     } catch {
       setError("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
