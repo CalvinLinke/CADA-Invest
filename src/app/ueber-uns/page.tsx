@@ -5,6 +5,7 @@ import { RuneDivider } from "@/components/ui/RuneDivider";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { CtaSection } from "@/components/sections/CtaSection";
+import { TeamSection } from "@/components/sections/TeamSection";
 import { staggerContainer, fadeUp, slideInLeft, slideInRight, viewportOnce } from "@/lib/animations";
 
 const values = [
@@ -151,6 +152,8 @@ export default function UeberUnsPage() {
           </Button>
         </div>
       </section>
+
+      <TeamSection />
 
       <CtaSection
         headline="Sprechen Sie uns an."
