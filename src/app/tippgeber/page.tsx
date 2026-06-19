@@ -6,6 +6,7 @@ import { RuneIcon } from "@/components/ui/RuneIcon";
 import { RuneDivider } from "@/components/ui/RuneDivider";
 import { Badge } from "@/components/ui/Badge";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/animations";
+import { submitContact } from "@/lib/submitContact";
 
 const privateItems = [
   "Eigentümer aus Ihrem Netzwerk mit Verkaufsabsicht",
@@ -36,12 +37,16 @@ export default function TippgeberPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/tippgeber", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+      await submitContact({
+        subject: `Neue Tippgeber-Anfrage von ${form.name}`,
+        replyTo: form.email,
+        fields: {
+          Formular: "Tippgeber (cada-invest.de/tippgeber)",
+          Name: form.name,
+          "E-Mail": form.email,
+          "Hinweis / Nachricht": form.nachricht,
+        },
       });
-      if (!res.ok) throw new Error();
       setSent(true);
     } catch {
       setError("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
