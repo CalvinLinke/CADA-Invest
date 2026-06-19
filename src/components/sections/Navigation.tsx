@@ -98,7 +98,8 @@ export function Navigation() {
                 "lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg",
                 transparent ? "text-white" : "text-brand-anthracite"
               )}
-              aria-label="Menü öffnen"
+              aria-expanded={open}
+              aria-label={open ? "Menü schließen" : "Menü öffnen"}
             >
               <span className={cn("w-6 h-0.5 bg-current transition-all duration-200", open && "translate-y-2 rotate-45")} />
               <span className={cn("w-6 h-0.5 bg-current transition-all duration-200", open && "opacity-0")} />
