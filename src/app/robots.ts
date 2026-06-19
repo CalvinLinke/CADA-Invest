@@ -3,6 +3,6 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/", disallow: ["/api/"] },
-    sitemap: "https://cada-invest.de/sitemap.xml",
+    sitemap: "https://www.cada-invest.de/sitemap.xml",
   };
 }
