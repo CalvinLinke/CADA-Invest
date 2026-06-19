@@ -6,6 +6,7 @@ import { RuneIcon } from "@/components/ui/RuneIcon";
 import { RuneDivider } from "@/components/ui/RuneDivider";
 import { Badge } from "@/components/ui/Badge";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/animations";
+import { submitContact } from "@/lib/submitContact";
 
 export default function KontaktPage() {
   const [form, setForm]       = useState({ name: "", email: "", telefon: "", betreff: "Allgemeine Anfrage", nachricht: "" });
@@ -22,12 +23,18 @@ export default function KontaktPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/kontakt", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+      await submitContact({
+        subject: `Kontaktanfrage: ${form.betreff || "Allgemeine Anfrage"} — ${form.name}`,
+        replyTo: form.email,
+        fields: {
+          Formular: "Kontakt (cada-invest.de/kontakt)",
+          Name: form.name,
+          "E-Mail": form.email,
+          Telefon: form.telefon,
+          Betreff: form.betreff,
+          Nachricht: form.nachricht,
+        },
       });
-      if (!res.ok) throw new Error();
       setSent(true);
     } catch {
       setError("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
