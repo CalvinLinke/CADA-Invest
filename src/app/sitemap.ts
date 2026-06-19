@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://cada-invest.de";
+const BASE_URL = "https://www.cada-invest.de";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/kontakt`,                 lastModified: new Date(), changeFrequency: "monthly",  priority: 0.7 },
     { url: `${BASE_URL}/partner`,                 lastModified: new Date(), changeFrequency: "monthly",  priority: 0.6 },
     { url: `${BASE_URL}/tippgeber`,               lastModified: new Date(), changeFrequency: "monthly",  priority: 0.6 },
+    { url: `${BASE_URL}/investoren`,              lastModified: new Date(), changeFrequency: "monthly",  priority: 0.6 },
     { url: `${BASE_URL}/impressum`,               lastModified: new Date(), changeFrequency: "yearly",   priority: 0.3 },
     { url: `${BASE_URL}/datenschutz`,             lastModified: new Date(), changeFrequency: "yearly",   priority: 0.3 },
     { url: `${BASE_URL}/sitemap`,                 lastModified: new Date(), changeFrequency: "monthly",  priority: 0.2 },
