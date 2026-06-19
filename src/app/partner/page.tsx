@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/animations";
+import { submitContact } from "@/lib/submitContact";
 
 const criteria = [
   "Lage: Sachsen, insbesondere Dresden, Leipzig, Chemnitz",
@@ -33,12 +34,21 @@ export default function PartnerPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/partner", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+      await submitContact({
+        subject: `Deal-Anfrage von ${form.name}`,
+        replyTo: form.email,
+        fields: {
+          Formular: "Partner / Deal (cada-invest.de/partner)",
+          Name: form.name,
+          "E-Mail": form.email,
+          Telefon: form.telefon,
+          Immobilienart: form.immobilienart,
+          Adresse: form.adresse,
+          "Größe (m²)": form.groesse,
+          Zustand: form.zustand,
+          Anmerkungen: form.anmerkungen,
+        },
       });
-      if (!res.ok) throw new Error();
       setSent(true);
     } catch {
       setError("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
